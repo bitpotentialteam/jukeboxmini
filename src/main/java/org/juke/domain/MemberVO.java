@@ -5,10 +5,8 @@ import java.sql.Date;
 public class MemberVO {
 
 	
-	private String userid, userpw, nickname;
+	private String userid, userpw, nick;
 	private Date regdate, updatedate;
-	
-	
 	public String getUserid() {
 		return userid;
 	}
@@ -21,11 +19,11 @@ public class MemberVO {
 	public void setUserpw(String userpw) {
 		this.userpw = userpw;
 	}
-	public String getNickname() {
-		return nickname;
+	public String getNick() {
+		return nick;
 	}
-	public void setNickname(String nickname) {
-		this.nickname = nickname;
+	public void setNick(String nick) {
+		this.nick = nick;
 	}
 	public Date getRegdate() {
 		return regdate;
@@ -39,12 +37,12 @@ public class MemberVO {
 	public void setUpdatedate(Date updatedate) {
 		this.updatedate = updatedate;
 	}
-	
 	@Override
 	public String toString() {
-		return "MemberVO [userid=" + userid + ", userpw=" + userpw + ", nickname=" + nickname + ", regdate=" + regdate
+		return "MemberVO [userid=" + userid + ", userpw=" + userpw + ", nick=" + nick + ", regdate=" + regdate
 				+ ", updatedate=" + updatedate + "]";
 	}
+	
 	
 	
 }

@@ -1,1 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="org.juke.ReplyMapper">
+
+	<insert id="create" parameterType="ReplyVO">
+		insert into tbl_reply(rno, mno, userid, content)
+		values (seq_rno.nextval, #{mno},#{userid}, #{content})
+	</insert>	
+	
+	<select id="read" resultType="ReplyVO">
+		select * from tbl_reply
+	</select>
+	
+	<update id="update" parameterType="ReplyVO">
+		update tbl_reply set rno = #{rno} where content = #{content}
+	</update>
+	
+	<delete id="delete" parameterType="ReplyVO">
+		delete from tbl_reply where bno = #{bno}
+	</delete>
+		
+	
+</mapper>
