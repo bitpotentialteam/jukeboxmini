@@ -4,7 +4,7 @@ import org.juke.domain.ReplyVO;
 
 public class ReplyDAOImpl extends AbstractDAO<ReplyVO, Integer> implements ReplyDAO{
 
-	
+
 	public ReplyDAOImpl(){
 		this.NAME = "";
 	}
