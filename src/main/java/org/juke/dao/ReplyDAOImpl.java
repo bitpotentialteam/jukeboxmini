@@ -6,6 +6,6 @@ public class ReplyDAOImpl extends AbstractDAO<ReplyVO, Integer> implements Reply
 
 
 	public ReplyDAOImpl(){
-		this.NAME = "";
+		this.NAME = "org.juke.replyMapper";
 	}
 }

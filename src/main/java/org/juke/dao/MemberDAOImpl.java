@@ -6,7 +6,7 @@ public class MemberDAOImpl extends AbstractDAO<MemberVO, String> implements Memb
 
 
 	public MemberDAOImpl(){
-		this.NAME = "";
+		this.NAME = "org.juke.memberMapper";
 		
 	}
 	
