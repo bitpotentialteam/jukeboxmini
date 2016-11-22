@@ -16,6 +16,7 @@ public abstract class AbstractDAO<E, K> implements GenericDAO<E, K> {
 	protected String NAME;
 	
 	
+	
 	@Override
 	public void create(E vo) throws Exception {
 		

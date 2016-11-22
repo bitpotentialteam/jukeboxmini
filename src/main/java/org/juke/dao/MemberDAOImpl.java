@@ -12,4 +12,12 @@ public class MemberDAOImpl extends AbstractDAO<MemberVO, String> implements Memb
 		
 	}
 	
+	
+	public void login(MemberVO vo)throws Exception{
+	
+		sqlSession.selectOne(NAME + ".login", vo);
+		
+
+	}
+	
 }
