@@ -1,5 +1,7 @@
 package org.juke.service;
 
+import javax.inject.Inject;
+
 import org.juke.dao.MemberDAOImpl;
 import org.juke.domain.MemberVO;
 import org.springframework.stereotype.Service;
@@ -7,7 +9,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class MemberServiceImpl implements MemberService{
 
-	MemberDAOImpl dao = new MemberDAOImpl();
+	@Inject
+	MemberDAOImpl dao;
 	
 	@Override
 	public void signup(MemberVO vo) throws Exception {

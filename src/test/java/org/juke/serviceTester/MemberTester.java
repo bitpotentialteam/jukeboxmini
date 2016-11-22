@@ -23,7 +23,7 @@ public class MemberTester {
 		MemberVO vo = new MemberVO();
 		vo.setUserid("user01111");
 		vo.setUserpw("user01111");
-		vo.setNick("¾öÄ¿ÇÇ´ÙÈå¾ÆÁK");
+		vo.setNick("í•˜í•˜í•˜ã…");
 		
 		service.signup(vo);
 	}
