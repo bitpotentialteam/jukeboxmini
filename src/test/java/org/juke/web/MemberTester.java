@@ -5,10 +5,11 @@ import javax.inject.Inject;
 import org.juke.dao.MemberDAOImpl;
 import org.juke.domain.MemberVO;
 import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 
 public class MemberTester {
 	
-	@Inject
+	@Autowired
 	MemberDAOImpl dao;
 
 	@Test
