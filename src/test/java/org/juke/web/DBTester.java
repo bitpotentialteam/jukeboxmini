@@ -40,10 +40,11 @@ public class DBTester {
 	@Test
 	public void testDBConnection() throws Exception {
 
-		Class.forName("com.mysql.cj.jdbc.Driver");
+		Class.forName("oracle.jdbc.driver.OracleDriver");
 		Connection con = DriverManager.getConnection(
-				"jdbc:mysql://192.168.0.129:3306/bit88?userSSL=false&serverTimezone=Asia/Seoul", "makemoney",
-				"makemoney");
+				"jdbc:oracle:thin:@192.168.0.32:1521:XE",
+				"bit88",
+				"bit88");
 
 		System.out.println(con);
 		con.close();
