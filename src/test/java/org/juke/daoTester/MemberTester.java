@@ -26,8 +26,8 @@ public class MemberTester {
 		
 		MemberVO vo = new MemberVO();
 		
-		vo.setUserid("usertest2");
-		vo.setUserpw("usertest2");
+		vo.setUserid("usertest3");
+		vo.setUserpw("usertest3");
 		vo.setNick("ftest2");
 		
 		System.out.println(vo);

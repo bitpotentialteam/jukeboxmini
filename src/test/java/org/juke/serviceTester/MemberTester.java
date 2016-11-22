@@ -1,19 +1,31 @@
 package org.juke.serviceTester;
 
-import static org.junit.Assert.*;
+import javax.inject.Inject;
 
-import org.junit.Before;
+import org.juke.domain.MemberVO;
+import org.juke.service.MemberService;
+import org.juke.service.MemberServiceImpl;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations = { "file:src/main/webapp/WEB-INF/spring/root-context.xml" })
 public class MemberTester {
 
-	@Before
-	public void setUp() throws Exception {
-	}
+	@Inject
+	MemberService service;
 
 	@Test
-	public void test() {
-		fail("Not yet implemented");
+	public void signupTest() throws Exception{
+		
+		MemberVO vo = new MemberVO();
+		vo.setUserid("user01111");
+		vo.setUserpw("user01111");
+		vo.setNick("엄커피다흐아핳");
+		
+		service.signup(vo);
 	}
 
 }
