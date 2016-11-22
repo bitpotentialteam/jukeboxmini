@@ -18,14 +18,22 @@ public class MemberTester {
 	MemberService service;
 
 	@Test
-	public void signupTest() throws Exception{
-		
+	public void signupTest() throws Exception {
+
 		MemberVO vo = new MemberVO();
 		vo.setUserid("user01111");
 		vo.setUserpw("user01111");
-		vo.setNick("하하하ㅏ");
-		
 		service.signup(vo);
+	}
+
+	@Test
+	public void loginTest() throws Exception {
+		MemberVO vo = new MemberVO();
+		vo.setUserid("user01111");
+		vo.setUserpw("user01111");
+
+		service.login(vo);
+
 	}
 
 }

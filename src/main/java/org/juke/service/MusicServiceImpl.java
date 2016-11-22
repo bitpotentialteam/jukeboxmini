@@ -2,8 +2,9 @@ package org.juke.service;
 
 import java.util.List;
 
+import javax.inject.Inject;
+
 import org.juke.dao.MusicDAO;
-import org.juke.dao.MusicDAOImpl;
 import org.juke.domain.MemberVO;
 import org.juke.domain.MusicVO;
 import org.springframework.stereotype.Service;
@@ -11,7 +12,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class MusicServiceImpl implements MusicService  {
 
-	MusicDAO dao = new MusicDAOImpl();
+	@Inject
+	MusicDAO dao;
 	
 	
 	@Override

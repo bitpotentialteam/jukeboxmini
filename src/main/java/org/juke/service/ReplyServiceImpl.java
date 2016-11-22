@@ -2,6 +2,8 @@ package org.juke.service;
 
 import java.util.List;
 
+import javax.inject.Inject;
+
 import org.juke.dao.ReplyDAO;
 import org.juke.dao.ReplyDAOImpl;
 import org.juke.domain.ReplyVO;
@@ -10,7 +12,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class ReplyServiceImpl implements ReplyService {
 
-	ReplyDAO dao = new ReplyDAOImpl();
+	@Inject
+	ReplyDAO dao;
 	
 	
 	@Override
