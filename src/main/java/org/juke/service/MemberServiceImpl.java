@@ -9,7 +9,6 @@ public class MemberServiceImpl implements MemberService{
 			
 	}
 	
-
 	@Override
 	public void login(MemberVO vo) throws Exception {
 		// TODO Auto-generated method stub
