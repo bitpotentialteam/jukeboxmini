@@ -1,6 +1,5 @@
 package org.juke.web;
 
-
 import org.juke.dao.MemberDAO;
 import org.juke.domain.MemberVO;
 import org.junit.Test;
@@ -26,7 +25,7 @@ public class MemberTester {
 		
 		MemberVO vo = new MemberVO();
 		
-		vo.setUserid("user123");
+		vo.setUserid("user333");
 		vo.setUserpw("user123");
 		vo.setNick("gg");
 		
