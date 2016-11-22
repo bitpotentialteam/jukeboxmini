@@ -44,5 +44,4 @@ public class ReplyTester {
 		vo.setContent("°«È¿½Å Â¯Â¯¸Ç");
 		service.modify(vo);
 	}
-
 }
