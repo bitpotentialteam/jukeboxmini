@@ -64,5 +64,4 @@ public abstract class AbstractDAO<E, K> implements GenericDAO<E, K> {
 		return sqlSession.delete(NAME + ".count", key);
 	}
 	
-	
 }
