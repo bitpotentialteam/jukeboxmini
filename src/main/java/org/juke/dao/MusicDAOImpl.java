@@ -6,7 +6,7 @@ public class MusicDAOImpl extends AbstractDAO<MusicVO, Integer> implements Music
 	
 	
 	public MusicDAOImpl(){
-		this.NAME = "org.juke.musicMapper";
+		this.NAME = "org.juke.MusicMapper";
 		
 	}
 	
