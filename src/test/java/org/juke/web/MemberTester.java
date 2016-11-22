@@ -1,6 +1,7 @@
 package org.juke.web;
 
 
+import org.juke.dao.MemberDAO;
 import org.juke.dao.MemberDAOImpl;
 import org.juke.domain.MemberVO;
 import org.junit.Test;
@@ -14,7 +15,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 public class MemberTester {
 	
 	@Autowired
-	MemberDAOImpl dao;
+	MemberDAO dao;
 
 	@Test
 	public void daoTest() throws Exception{
