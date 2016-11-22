@@ -19,7 +19,7 @@ public abstract class AbstractDAO<E, K> implements GenericDAO<E, K> {
 	@Override
 	public void create(E vo) throws Exception {
 		
-		sqlSession.insert(NAME+".create",vo);
+		sqlSession.insert(NAME+".create", vo);
 		
 	}
 
