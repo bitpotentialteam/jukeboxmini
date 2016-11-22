@@ -1,12 +1,13 @@
 package org.juke.domain;
 
-import java.sql.Date;
+import java.util.Date;
 
 public class MemberVO {
 
 	
 	private String userid, userpw, nick;
 	private Date regdate, updatedate;
+	
 	public String getUserid() {
 		return userid;
 	}

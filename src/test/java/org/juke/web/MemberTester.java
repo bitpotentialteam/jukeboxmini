@@ -1,7 +1,7 @@
 package org.juke.web;
 
 
-import org.juke.dao.MemberDAOImpl;
+import org.juke.dao.MemberDAO;
 import org.juke.domain.MemberVO;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -14,7 +14,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 public class MemberTester {
 	
 	@Autowired
-	MemberDAOImpl dao;
+	private MemberDAO dao;
 
 	@Test
 	public void daoTest() throws Exception{
@@ -24,12 +24,11 @@ public class MemberTester {
 	@Test
 	public void createTest() throws Exception {
 		
-		dao = new MemberDAOImpl();
 		MemberVO vo = new MemberVO();
 		
-		vo.setUserid("user22");
-		vo.setUserpw("user22");
-		vo.setNick("유저이이");
+		vo.setUserid("user123");
+		vo.setUserpw("user123");
+		vo.setNick("gg");
 		
 		System.out.println(vo);
 		
