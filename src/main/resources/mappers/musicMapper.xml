@@ -2,39 +2,47 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-  
+
 <mapper namespace="org.juke.MusicMapper">
 
 	<insert id="create" parameterType="MusicVO">
-		insert into tbl_music(mno, title, singer, album, jacket, userid)
-		values (seq_mno.nextval, #{title}, #{singer}, #{album}, #{jacket}, #{userid})
-	</insert>	
-	
+		insert into tbl_music(mno,
+		title, singer, album, jacket, userid)
+		values (seq_mno.nextval,
+		#{title}, #{singer}, #{album}, #{jacket}, #{userid})
+	</insert>
+
 	<select id="read" resultType="MusicVO">
-		select * from tbl_music where mno=#{mno}
+		select * from tbl_music where
+		mno=#{mno}
 	</select>
-	
+
 	<update id="update" parameterType="MusicVO">
-		update tbl_music set title= #{title}, singer=#{singer}, album=#{album}, jacket=#{jacket} where mno=#{mno}
+		update tbl_music set title=
+		#{title}, singer=#{singer}, album=#{album}, jacket=#{jacket} where
+		mno=#{mno}
 	</update>
-	
+
 	<delete id="delete" parameterType="MusicVO">
-		delete from tbl_music where mno = #{mno}
+		delete from tbl_music where
+		mno = #{mno}
 	</delete>
-	
+
 	<select id="list" resultType="MusicVO">	
 		<![CDATA[
-		 select *from
-			( 
-			select rownum rn, mno, title, singer, album, jacket, userid
-			from tbl_music order by mno desc where rownum <= #{current} and mno > 0
-			)
-		where rn > 0
-		]]> 
+		 select * from (
+		 	SELECT * FROM (
+		 		SELECT rownum rn,title,singer,album,jacket,userid
+		 	  	FROM tbl_music
+          		) music
+        	where rn <= 18
+   			 )
+		where rn >=9;
+		]]>
 	</select>
-	
+
 	<select id="count" resultType="java.lang.Integer">
 		select count(*) from tbl_music
 	</select>
-	
+
 </mapper>
