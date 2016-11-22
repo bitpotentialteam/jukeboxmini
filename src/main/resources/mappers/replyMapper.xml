@@ -23,12 +23,14 @@
 	</delete>
 		
 	<select id="list" resultType="ReplyVO">	
+		<![CDATA[    
 		select *from
 			(
 			select rownum rn, rno, mno, content, userid
 			from tbl_music order by rno desc where mno =#{mno} and rownum <= #{current} and rno > 0
 			)
 		where rn > 0	
+		 ]]> 
 	</select>
 	
 	<select id="count" resultType="java.lang.Integer">

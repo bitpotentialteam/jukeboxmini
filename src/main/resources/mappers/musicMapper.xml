@@ -23,12 +23,14 @@
 	</delete>
 	
 	<select id="list" resultType="MusicVO">	
-		select *from
-			(
+		<![CDATA[
+		 select *from
+			( 
 			select rownum rn, mno, title, singer, album, jacket, userid
 			from tbl_music order by mno desc where rownum <= #{current} and mno > 0
 			)
 		where rn > 0
+		]]> 
 	</select>
 	
 	<select id="count" resultType="java.lang.Integer">
