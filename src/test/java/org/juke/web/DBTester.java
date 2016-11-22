@@ -20,15 +20,6 @@ public class DBTester {
 	@Inject
 	private DataSource ds;
 	
-	@Inject
-	private MemberDAO dao;
-
-	@Test
-	public void testTime() throws Exception {
-
-		System.out.println("test :" + dao);
-
-	}
 
 	@Test
 	public void testDB() throws Exception {
