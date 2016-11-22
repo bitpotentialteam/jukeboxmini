@@ -3,7 +3,7 @@
 <mapper namespace="org.juke.MemberMapper">
 
 	<insert id="create" parameterType="MemberVO">
-		insert into tbl_member(userid,userpw, nick)
+		insert into tbl_member(userid, userpw, nick)
 		values (#{userid},#{userpw},#{nick})
 	</insert>
 
