@@ -42,11 +42,10 @@
 	
 	<tx:annotation-driven/>
 	
-	<context:component-scan base-package="org.juke.dao"></context:component-scan>
-	<context:component-scan base-package="org.juke.service"></context:component-scan>
-	
-	<!-- 껍데기 알아서 만들어줘엉 -->
 	<aop:config></aop:config>
 	<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+
+	<context:component-scan base-package="org.juke.dao"></context:component-scan>
+	<context:component-scan base-package="org.juke.service"></context:component-scan>
 	
 </beans>
