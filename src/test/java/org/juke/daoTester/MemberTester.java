@@ -29,7 +29,7 @@ public class MemberTester {
 		vo.setUserid("usertest3");
 		vo.setUserpw("usertest3");
 		vo.setNick("ftest2");
-		
+		//¹è°íÆÄ
 		System.out.println(vo);
 		
 		dao.create(vo);
