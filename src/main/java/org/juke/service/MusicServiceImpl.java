@@ -1,5 +1,6 @@
 package org.juke.service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.inject.Inject;
@@ -42,9 +43,10 @@ public class MusicServiceImpl implements MusicService  {
 
 	
 	@Override
-	public List<MemberVO> list() throws Exception {
-		// TODO Auto-generated method stub
-		return null;
+	public List<MusicVO> list(Integer page) throws Exception {
+		List<MusicVO> list = new ArrayList<MusicVO>();
+		list = dao.list(page);
+		return list;
 	}
 	
 	

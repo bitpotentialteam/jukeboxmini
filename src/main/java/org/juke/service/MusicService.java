@@ -16,6 +16,6 @@ public interface MusicService {
 	
 	public void modify(MusicVO vo) throws Exception;
 	
-	public List<MemberVO> list() throws Exception;
+	public List<MusicVO> list(Integer page) throws Exception;
 
 }

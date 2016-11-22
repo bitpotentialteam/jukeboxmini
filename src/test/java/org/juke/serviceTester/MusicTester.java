@@ -6,6 +6,8 @@ import org.juke.domain.MusicVO;
 import org.juke.service.MusicService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -13,6 +15,9 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @ContextConfiguration(locations = { "file:src/main/webapp/WEB-INF/spring/root-context.xml" })
 public class MusicTester {
 
+	private static final Logger logger = LoggerFactory.getLogger(MemberTester.class);
+
+	
 	@Inject
 	MusicService service;
 
@@ -20,10 +25,10 @@ public class MusicTester {
 	public void registerTest() throws Exception {
 		MusicVO vo = new MusicVO();
 
-		vo.setTitle("¾ß»ýÈ­");
-		vo.setSinger("°«È¿½Å");
-		vo.setAlbum("¾ß»ýÈ­");
-		vo.setJacket("È¿½Å°«");
+		vo.setTitle("ï¿½ß»ï¿½È­");
+		vo.setSinger("ï¿½ï¿½È¿ï¿½ï¿½");
+		vo.setAlbum("ï¿½ß»ï¿½È­");
+		vo.setJacket("È¿ï¿½Å°ï¿½");
 		vo.setUserid("user01");
 
 		System.out.println(vo);
@@ -48,11 +53,19 @@ public class MusicTester {
 
 		vo.setMno(1);
 		vo.setTitle("TT");
-		vo.setSinger("Æ®¿ÍÀÌ½º");
-		vo.setAlbum("¹Ì³ª");
-		vo.setJacket("¸ð¸ð");
+		vo.setSinger("Æ®ï¿½ï¿½ï¿½Ì½ï¿½");
+		vo.setAlbum("ï¿½Ì³ï¿½");
+		vo.setJacket("ï¿½ï¿½ï¿½");
 		service.modify(vo);
 
+	}
+	
+	@Test
+	public void listTest() throws Exception{
+					
+		
+		logger.info("" + service.list(1));
+		
 	}
 
 }
