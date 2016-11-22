@@ -15,32 +15,34 @@
 
 	</properties>
 
-<repositories>
-    <repository>
-        <id>mvn2</id>
-        <url>http://repo1.maven.org/maven2/</url>
-        <releases>
-            <enabled>true</enabled>
-        </releases>
-        <snapshots>
-            <enabled>true</enabled>
-        </snapshots>
-    </repository>
-     
-    <repository>
-         <id>oracle</id>
-         <name>ORACLE JDBC Repository</name>
-         <url>http://mesir.googlecode.com/svn/trunk/mavenrepo</url>
-    </repository> 
-</repositories>
-	
+	<repositories>
+		<repository>
+			<id>mvn2</id>
+			<url>http://repo1.maven.org/maven2/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+
+		<repository>
+			<id>oracle</id>
+			<name>ORACLE JDBC Repository</name>
+			<url>http://maven.jahia.org/maven2</url>
+		</repository>
+	</repositories>
+
+
 	<dependencies>
 
-	<dependency>
-    <groupId>commons-dbcp</groupId>
-    <artifactId>commons-dbcp</artifactId>
-    <version>1.4</version>
-</dependency>
+
+		<dependency>
+			<groupId>commons-dbcp</groupId>
+			<artifactId>commons-dbcp</artifactId>
+			<version>1.4</version>
+		</dependency>
 
 		<!-- Spring -->
 		<dependency>
@@ -83,6 +85,11 @@
 			<version>${org.springframework-version}</version>
 		</dependency>
 
+		<dependency>
+			<groupId>com.oracle</groupId>
+			<artifactId>ojdbc6</artifactId>
+			<version>11.1.0.7.0</version>
+		</dependency>
 
 		<!-- AspectJ -->
 		<dependency>
