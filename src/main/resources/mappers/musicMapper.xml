@@ -11,11 +11,11 @@
 	</insert>	
 	
 	<select id="read" resultType="MusicVO">
-		select * from tbl_music
+		select * from tbl_music where mno=#{mno}
 	</select>
 	
 	<update id="update" parameterType="MusicVO">
-		update tbl_music set (#{title}, #{singer}, #{album}, #{jacket})
+		update tbl_music set title= #{title}, singer=#{singer}, album=#{album}, jacket=#{jacket} where mno=#{mno}
 	</update>
 	
 	<delete id="delete" parameterType="MusicVO">

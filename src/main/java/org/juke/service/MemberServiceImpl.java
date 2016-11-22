@@ -1,7 +1,5 @@
 package org.juke.service;
 
-public class TestService {
+public class MemberServiceImpl {
 
-	
-	
 }

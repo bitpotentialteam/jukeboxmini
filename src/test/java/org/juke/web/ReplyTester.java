@@ -16,7 +16,7 @@ public class ReplyTester {
 	ReplyDAOImpl dao;
 
 	@Test
-	public void test() throws Exception {
+	public void crateTest() throws Exception {
 		
 		ReplyVO vo = new ReplyVO();
 		
@@ -26,6 +26,34 @@ public class ReplyTester {
 		
 		dao.create(vo);
 		
+	}
+	
+	
+	@Test
+	public void readTest() throws Exception {
+		
+		System.out.println(dao.read(1));
+		
+	}
+	
+	
+	@Test
+	public void deleteTest() throws Exception {
+		
+		dao.delete(2);
+		
+	}
+	
+	
+	@Test
+	public void updateTest() throws Exception {
+		
+		ReplyVO vo = new ReplyVO();
+		
+		vo.setRno(1);
+		vo.setContent("TESTTESTESETSETEST");
+		
+		dao.update(vo);
 		
 	}
 

@@ -11,16 +11,19 @@
 	</insert>	
 	
 	<select id="read" resultType="ReplyVO">
-		select * from tbl_reply
+		select * from tbl_reply where rno=#{rno}
 	</select>
 	
 	<update id="update" parameterType="ReplyVO">
-		update tbl_reply set rno = #{rno} where content = #{content}
+		update tbl_reply set content = #{content} where  rno = #{rno}
 	</update>
 	
 	<delete id="delete" parameterType="ReplyVO">
-		delete from tbl_reply where bno = #{bno}
+		delete from tbl_reply where rno = #{rno}
 	</delete>
 		
+	<select id="list" rewultType="ReplyVO">
+	
+	</select>
 	
 </mapper>
