@@ -24,6 +24,7 @@ public class MusicTester {
 		
 		System.out.println(vo);
 
+		
 		dao.create(vo);
 	}
 }
