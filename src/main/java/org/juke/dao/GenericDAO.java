@@ -14,4 +14,7 @@ public interface GenericDAO<E, K> {
 	public void delete(K key)throws Exception;
 
 	public List<E> list(K key) throws Exception;
+	
+	public int getCount(K key) throws Exception;
+	
 }

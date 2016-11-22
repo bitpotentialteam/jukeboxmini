@@ -56,4 +56,12 @@ public abstract class AbstractDAO<E, K> implements GenericDAO<E, K> {
 		return list;
 		
 	}
+	
+	
+	@Override
+	public int getCount(K key) throws Exception {
+		
+		return sqlSession.delete(NAME + ".count", key);
+	}
+	
 }

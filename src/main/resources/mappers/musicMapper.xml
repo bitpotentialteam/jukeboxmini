@@ -22,13 +22,17 @@
 		delete from tbl_music where mno = #{mno}
 	</delete>
 	
-	<select id="list" resultType="MusicVO">	<!-- @@@@@@@@@@@@@ 확인 @@@@@@@@@@@@@ -->
-		select * from
-		(
-		<!--	select rownum, mno, title, singer, album, jacket, userid
-			 from tbl_music where (#{listNum}-5) < rownum <= #{listNum} and mno > 0 -->
-		)
-		where mno > 0	 <!--  listNum paging 시 5개 단위로... -->
+	<select id="list" resultType="MusicVO">	
+		select *from
+			(
+			select rownum rn, mno, title, singer, album, jacket, userid
+			from tbl_music order by mno desc where rownum <= #{current} and mno > 0
+			)
+		where rn > 0
+	</select>
+	
+	<select id="count" resultType="java.lang.Integer">
+		select count(*) from tbl_music
 	</select>
 	
 </mapper>
