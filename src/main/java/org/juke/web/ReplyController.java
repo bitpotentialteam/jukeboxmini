@@ -24,8 +24,8 @@ public class ReplyController {
 	private static final Logger logger = LoggerFactory.getLogger(ReplyController.class);
 
 	
-	@GetMapping("/view/{num}")	// ´ñ±Û ¸®½ºÆ®.
-	public List<ReplyVO> replyView(@PathVariable("num") Integer num){
+	@GetMapping("/list/{page}")	// ´ñ±Û ¸®½ºÆ®.
+	public List<ReplyVO> replyList(@PathVariable("page") Integer page){
 		
 		List<ReplyVO> list = new ArrayList<ReplyVO>();
 		
