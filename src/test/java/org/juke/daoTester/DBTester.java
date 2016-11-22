@@ -1,4 +1,4 @@
-package org.juke.web;
+package org.juke.daoTester;
 
 
 import java.sql.Connection;

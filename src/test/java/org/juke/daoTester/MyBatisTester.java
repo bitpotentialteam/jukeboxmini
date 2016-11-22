@@ -1,4 +1,4 @@
-package org.juke.web;
+package org.juke.daoTester;
 
 import static org.junit.Assert.fail;
 

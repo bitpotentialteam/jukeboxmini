@@ -1,4 +1,4 @@
-package org.juke.web;
+package org.juke.daoTester;
 
 import org.juke.dao.ReplyDAOImpl;
 import org.juke.domain.ReplyVO;
