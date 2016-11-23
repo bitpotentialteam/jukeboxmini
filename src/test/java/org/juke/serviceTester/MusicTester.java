@@ -15,7 +15,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @ContextConfiguration(locations = { "file:src/main/webapp/WEB-INF/spring/root-context.xml" })
 public class MusicTester {
 
-	private static final Logger logger = LoggerFactory.getLogger(MemberTester.class);
+	private static final Logger logger = LoggerFactory.getLogger(MusicTester.class);
 
 	
 	@Inject
@@ -63,7 +63,15 @@ public class MusicTester {
 	@Test
 	public void listTest() throws Exception{
 					
-		logger.info("" + service.list(2));
+		
+		logger.info("" + service.list(1));
+		
+	}
+	@Test
+	public void countTest() throws Exception{
+					
+		
+		logger.info("test" + service.count());
 		
 	}
 

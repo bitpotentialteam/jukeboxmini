@@ -1,9 +1,5 @@
 package org.juke.web;
 
-import javax.inject.Inject;
-
-import org.juke.domain.MemberVO;
-import org.juke.service.MemberServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -22,21 +18,29 @@ public class MemberController {
    private static final Logger logger = LoggerFactory.getLogger(MemberController.class);
 
    @PostMapping("/signup")
-   public String signup(@RequestBody MemberVO vo) {
+   public void signup(@RequestBody String userid, String userpw, String nick) {
 
-      logger.info("vo" + vo);
+      logger.info("vo" + userid + userpw+ nick);
 
-      return "success";
+     
    }
 
    @GetMapping("/login")
    public void getLogin() {
-
+    
    }
 
    @PostMapping("/login")
-   public void registPOST(MemberVO vo, Model model) throws Exception{
-      
-      
-     }
+   public void registPOST(String userid, String userpw, Model model){
+     logger.info("인생 로그인");
+     logger.info("userid" + userid);
+     logger.info("userpw" + userpw);
+    
+      model.addAttribute("value",userid);
+   }
+   
+   @PostMapping
+   public void logout(){
+      logger.info("인생 로그아웃");
+   }
 }

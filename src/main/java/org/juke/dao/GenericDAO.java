@@ -15,6 +15,6 @@ public interface GenericDAO<E, K> {
 
 	public List<E> list(K key) throws Exception;
 	
-	public int getCount(K key) throws Exception;
+	public int getCount() throws Exception;
 	
 }

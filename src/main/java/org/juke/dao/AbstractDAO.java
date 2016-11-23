@@ -60,9 +60,9 @@ public abstract class AbstractDAO<E, K> implements GenericDAO<E, K> {
 	
 	
 	@Override
-	public int getCount(K key) throws Exception {
+	public int getCount() throws Exception {
 		
-		return sqlSession.delete(NAME + ".count", key);
+		return sqlSession.selectOne(NAME + ".count");
 	}
 	
 }

@@ -49,6 +49,13 @@ public class MusicServiceImpl implements MusicService  {
 		return list;
 	}
 	
+	@Override
+	public int count() throws Exception{
+		
+		return dao.getCount();
+	}
+	
+	
 	
 
 }
