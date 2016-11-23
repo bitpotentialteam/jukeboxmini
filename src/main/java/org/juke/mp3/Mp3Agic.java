@@ -42,6 +42,7 @@ public class Mp3Agic {
 		vo.setImageType(mimeType);
 
 		return vo;
+	
 		
 	}
 
