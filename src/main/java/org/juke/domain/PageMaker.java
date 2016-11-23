@@ -16,7 +16,7 @@ public class PageMaker {
 	private void calcPage() {
 
 		int tempEnd = (int) (Math.ceil(current / 8.0) * 8);
-
+		
 		start = tempEnd - 7;
 
 		prev = start == 1 ? false : true;
@@ -55,6 +55,8 @@ public class PageMaker {
 		return total;
 	}
 
+	
+	
 	@Override
 	public String toString() {
 		return "PageMaker [prev=" + prev + ", next=" + next + ", start=" + start + ", end=" + end + ", current="
