@@ -31,7 +31,7 @@ public class MemberController {
 
    @GetMapping("/login")
    public void getLogin() {
-
+	 
    }
 
    @PostMapping("/login")
