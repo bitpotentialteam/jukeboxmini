@@ -16,6 +16,8 @@ public class PageMaker {
 	private void calcPage() {
 
 		int tempEnd = (int) (Math.ceil(current / 8.0) * 8);
+		
+		int tempStart = tempEnd-8;
 
 		start = tempEnd - 7;
 
