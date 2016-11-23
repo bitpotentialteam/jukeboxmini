@@ -63,7 +63,8 @@ public class MusicTester {
 	@Test
 	public void listTest() throws Exception{
 					
-		logger.info("" + service.list(2));
+		
+		logger.info("" + service.list(1));
 		
 	}
 
