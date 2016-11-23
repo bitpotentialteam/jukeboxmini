@@ -16,45 +16,45 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@CrossOrigin	
+@CrossOrigin   
 @RestController 
 @RequestMapping("/music/*")
 public class MusicController {
 
-	private static final Logger logger = LoggerFactory.getLogger(MusicController.class);
-	
-	@GetMapping("/list/{page}")
-	public List<MusicVO> musicList(@PathVariable("page") Integer page){
-		
-		List<MusicVO> list = new ArrayList<MusicVO>();
-		
-		for (MusicVO musicVO : list) {
-			list.add(musicVO);
-		}
-		
-		return list;
-	}
-	
-	@GetMapping("/view/{mno}")
-	public MusicVO musicView(@PathVariable("mno") Integer mno){
-		
-		return null;
-	}
-	
-	
-	@PostMapping("/register")
-	public void musicRegister(MusicVO vo){
-		
-	}
-	
-	@PutMapping
-	@PatchMapping("/modify/{mno}")
-	public void musicModify(MusicVO vo){
-		
-	}
-	
-	@DeleteMapping("/delete/{mno}")
-	public void musicDelete(@PathVariable("mno") Integer mno){
-		
-	}
+   private static final Logger logger = LoggerFactory.getLogger(MusicController.class);
+   
+   @GetMapping("/list/{page}")
+   public List<MusicVO> musicList(@PathVariable Integer page){
+      
+      List<MusicVO> list = new ArrayList<MusicVO>();
+      
+      for (MusicVO musicVO : list) {
+         list.add(musicVO);
+      }
+      
+      return list;
+   }
+   
+   @GetMapping("/view/{mno}")
+   public MusicVO musicView(@PathVariable("mno") Integer mno){
+      
+      return null;
+   }
+   
+   
+   @PostMapping("/register")
+   public void musicRegister(MusicVO vo){
+      
+   }
+   
+   @PutMapping
+   @PatchMapping("/modify/{mno}")
+   public void musicModify(MusicVO vo){
+      
+   }
+   
+   @DeleteMapping("/delete/{mno}")
+   public void musicDelete(@PathVariable("mno") Integer mno){
+      
+   }
 }
