@@ -1,5 +1,6 @@
 package org.juke.dao;
 
+import org.juke.domain.MemberVO;
 import org.juke.domain.MusicVO;
 import org.springframework.stereotype.Repository;
 
@@ -12,5 +13,6 @@ public class MusicDAOImpl extends AbstractDAO<MusicVO, Integer> implements Music
 		
 	}
 	
+
 
 }
