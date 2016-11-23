@@ -34,10 +34,10 @@
 		 	SELECT * FROM (
 		 		SELECT rownum rn,title,singer,album,jacket,userid
 		 	  	FROM tbl_music
-          		) music
+          		) 
         	where rn <= 18
    			 )
-		where rn >=9;
+		where rn >=9
 		]]>
 	</select>
 
