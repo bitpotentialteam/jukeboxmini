@@ -13,7 +13,7 @@ public class ReplyServiceImpl implements ReplyService {
 
 	@Inject
 	ReplyDAO dao;
-	
+	     
 	@Override
 	public void register(ReplyVO vo) throws Exception {
 		dao.create(vo);
