@@ -24,7 +24,7 @@ public class ReplyController {
 	private static final Logger logger = LoggerFactory.getLogger(ReplyController.class);
 
 	
-	@GetMapping("/list/{page}")	// ´ñ±Û ¸®½ºÆ®.
+	@GetMapping("/list/{page}")	// ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ®.
 	public List<ReplyVO> replyList(@PathVariable("page") Integer page){
 		
 		List<ReplyVO> list = new ArrayList<ReplyVO>();
@@ -36,8 +36,8 @@ public class ReplyController {
 		return list;
 	}
 	
-	@PostMapping("/register")	// ´ñ±Û µî·Ï.
-	public void replyRegister(){
+	@PostMapping("/register")	// ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½.
+	public void replyRegister(ReplyVO vo){
 		
 	}
 	
