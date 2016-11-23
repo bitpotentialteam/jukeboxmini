@@ -35,9 +35,9 @@
 		 		SELECT rownum rn,title,singer,album,jacket,userid
 		 	  	FROM tbl_music
           		) 
-        	where rn <= 18
+        	where rn <= 16
    			 )
-		where rn >=9
+		where rn >=8
 		]]>
 	</select>
 
