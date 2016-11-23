@@ -6,7 +6,7 @@ public class MusicVO {
 	
 	
 	private Integer mno;
-	private String title, singer, album, jacket, userid;
+	private String title, singer, album, jacket, userid, imageType;
 	private Date regdate, updatedate;
 	
 	
@@ -46,6 +46,12 @@ public class MusicVO {
 	public void setUserid(String userid) {
 		this.userid = userid;
 	}
+	public String getImageType() {
+		return imageType;
+	}
+	public void setImageType(String imageType) {
+		this.imageType = imageType;
+	}
 	public Date getRegdate() {
 		return regdate;
 	}
@@ -62,7 +68,8 @@ public class MusicVO {
 	@Override
 	public String toString() {
 		return "MusicVO [mno=" + mno + ", title=" + title + ", singer=" + singer + ", album=" + album + ", jacket="
-				+ jacket + ", userid=" + userid + ", regdate=" + regdate + ", updatedate=" + updatedate + "]";
+				+ jacket + ", userid=" + userid + ", imageType=" + imageType + ", regdate=" + regdate + ", updatedate="
+				+ updatedate + "]";
 	}
 	
 	
