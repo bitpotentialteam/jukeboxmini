@@ -47,7 +47,7 @@ public class ReplyController {
 	public void replyRegister(ReplyVO vo) throws Exception{
 		
 		service.register(vo);
-		
+	
 	}
 	
 	@DeleteMapping("/delete/{num}")
