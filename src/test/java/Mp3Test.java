@@ -12,6 +12,7 @@ public class Mp3Test {
 		mp3 = new Mp3Agic();
 	}
 	
+	
 	@Test
 	public void mp3AgicTest() throws Exception {
 		
