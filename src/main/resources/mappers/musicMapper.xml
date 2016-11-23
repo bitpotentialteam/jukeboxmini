@@ -35,9 +35,9 @@
 		 		SELECT rownum rn,title,singer,album,jacket,userid
 		 	  	FROM tbl_music
           		) 
-        	where rn <= #{tempEnd}
+        	where rn <= #{end}
    			 )
-		where rn >= #{tempStart}
+		where rn >= #{start}
 		]]>
 	</select>
 
