@@ -25,10 +25,10 @@ public class MusicTester {
 	public void registerTest() throws Exception {
 		MusicVO vo = new MusicVO();
 
-		vo.setTitle("�߻�ȭ");
-		vo.setSinger("��ȿ��");
-		vo.setAlbum("�߻�ȭ");
-		vo.setJacket("ȿ�Ű�");
+		vo.setTitle("占쌩삼옙화");
+		vo.setSinger("占쏙옙효占쏙옙");
+		vo.setAlbum("占쌩삼옙화");
+		vo.setJacket("효占신곤옙");
 		vo.setUserid("user01");
 
 		System.out.println(vo);
@@ -53,9 +53,9 @@ public class MusicTester {
 
 		vo.setMno(1);
 		vo.setTitle("TT");
-		vo.setSinger("Ʈ���̽�");
-		vo.setAlbum("�̳�");
-		vo.setJacket("���");
+		vo.setSinger("트占쏙옙占싱쏙옙");
+		vo.setAlbum("占싱놂옙");
+		vo.setJacket("占쏙옙占�");
 		service.modify(vo);
 
 	}
@@ -63,8 +63,7 @@ public class MusicTester {
 	@Test
 	public void listTest() throws Exception{
 					
-		
-		logger.info("" + service.list(1));
+		logger.info("" + service.list(2));
 		
 	}
 

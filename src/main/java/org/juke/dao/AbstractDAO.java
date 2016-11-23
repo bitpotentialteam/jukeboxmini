@@ -51,7 +51,8 @@ public abstract class AbstractDAO<E, K> implements GenericDAO<E, K> {
 		
 		List<E> list = new ArrayList<E>();
 		
-		list = sqlSession.selectList(NAME + ".list", key);
+	
+			list = sqlSession.selectList(NAME + ".list", key);
 		
 		return list;
 		
