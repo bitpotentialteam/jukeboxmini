@@ -21,8 +21,37 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
-	<context:component-scan base-package="org.juke.web" />
+	<beans:bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<beans:property name="maxUploadSize" value="20971520"></beans:property>
+	</beans:bean>
 	
+	<beans:bean id="loginInter" class="org.juke.interceptor.LoginInterceptor">
+	</beans:bean>	
+
+	<beans:bean id="checkInter" class="org.juke.interceptor.CheckLoginInterceptor">
+	</beans:bean>
+
+	<beans:bean id="logoutInter" class="org.juke.interceptor.LogoutInterceptor">
+	</beans:bean>
+
+	<interceptors>
+		<interceptor>
+			<mapping path="/logout"/>
+			<beans:ref bean="logoutInter"/>
+		</interceptor>
+		
+		<interceptor>
+			<mapping path="/login"/>
+			<beans:ref bean="loginInter"/>
+		</interceptor>
+		
+		<interceptor>
+			<mapping path="/check"/>
+			<beans:ref bean="checkInter"/>
+		</interceptor>
+	</interceptors>
 	
+	<context:component-scan base-package="org.juke.web" />	
 	
 </beans:beans>

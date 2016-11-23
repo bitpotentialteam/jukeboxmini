@@ -1,9 +1,12 @@
 package org.juke.web;
 
-import java.util.ArrayList;
 import java.util.List;
 
+import javax.inject.Inject;
+
 import org.juke.domain.MusicVO;
+import org.juke.service.MusicService;
+import org.juke.service.MusicServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -23,38 +26,35 @@ public class MusicController {
 
    private static final Logger logger = LoggerFactory.getLogger(MusicController.class);
    
+   @Inject
+   MusicService service = new MusicServiceImpl();
+   
    @GetMapping("/list/{page}")
-   public List<MusicVO> musicList(@PathVariable Integer page){
+   public List<MusicVO> musicList(@PathVariable Integer page) throws Exception{
       
-      List<MusicVO> list = new ArrayList<MusicVO>();
-      
-      for (MusicVO musicVO : list) {
-         list.add(musicVO);
-      }
-      
-      return list;
+      return service.list(page);
    }
    
    @GetMapping("/view/{mno}")
-   public MusicVO musicView(@PathVariable("mno") Integer mno){
+   public MusicVO musicView(@PathVariable("mno") Integer mno) throws Exception{
       
-      return null;
+      return service.search(mno);
    }
    
    
    @PostMapping("/register")
-   public void musicRegister(MusicVO vo){
-      
+   public void musicRegister(MusicVO vo) throws Exception{
+      service.register(vo);
    }
    
    @PutMapping
    @PatchMapping("/modify/{mno}")
-   public void musicModify(MusicVO vo){
-      
+   public void musicModify(MusicVO vo) throws Exception{
+      service.modify(vo);
    }
    
    @DeleteMapping("/delete/{mno}")
-   public void musicDelete(@PathVariable("mno") Integer mno){
-      
+   public void musicDelete(@PathVariable("mno") Integer mno) throws Exception{
+      service.delete(mno);
    }
 }
