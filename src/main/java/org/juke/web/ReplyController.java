@@ -29,7 +29,7 @@ public class ReplyController {
 	@Inject
 	ReplyServiceImpl service;
 	
-	@GetMapping("/list/{page}")	// ��� ����Ʈ.
+	@GetMapping("/list/{page}")	// 占쏙옙占� 占쏙옙占쏙옙트.
 	public List<ReplyVO> replyList(@PathVariable("page") Integer page){
 		
 		List<ReplyVO> list = new ArrayList<ReplyVO>();
@@ -43,7 +43,7 @@ public class ReplyController {
 		return list;
 	}
 	
-	@PostMapping("/register")	// ��� ���.
+	@PostMapping("/register")	// 占쏙옙占� 占쏙옙占�.
 	public void replyRegister(ReplyVO vo) throws Exception{
 		
 		service.register(vo);
