@@ -3,7 +3,10 @@ package org.juke.web;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.inject.Inject;
+
 import org.juke.domain.ReplyVO;
+import org.juke.service.ReplyServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -23,11 +26,15 @@ public class ReplyController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(ReplyController.class);
 
+	@Inject
+	ReplyServiceImpl service;
 	
 	@GetMapping("/list/{page}")	// ��� ����Ʈ.
 	public List<ReplyVO> replyList(@PathVariable("page") Integer page){
 		
 		List<ReplyVO> list = new ArrayList<ReplyVO>();
+		
+		//list = service.list(page);
 		
 		for (ReplyVO replyVO : list) {
 			list.add(replyVO);
@@ -37,12 +44,15 @@ public class ReplyController {
 	}
 	
 	@PostMapping("/register")	// ��� ���.
-	public void replyRegister(ReplyVO vo){
+	public void replyRegister(ReplyVO vo) throws Exception{
 		
+		service.register(vo);
+	
 	}
 	
 	@DeleteMapping("/delete/{num}")
-	public void replyDelete(@PathVariable("num") Integer num){
-		
+	public void replyDelete(@PathVariable("num") Integer num) throws Exception{
+	
+		service.delete(num);
 	}
 }
