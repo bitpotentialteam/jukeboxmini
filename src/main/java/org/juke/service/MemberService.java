@@ -7,5 +7,5 @@ public interface MemberService {
 	
 	public void signup(MemberVO vo) throws Exception;
 	
-	public void login(MemberVO vo) throws Exception;
+	public boolean login(MemberVO vo) throws Exception;
 }

@@ -18,8 +18,8 @@ public class MemberServiceImpl implements MemberService{
 	}
 	
 	@Override
-	public void login(MemberVO vo) throws Exception {
-		dao.login(vo);
+	public boolean login(MemberVO vo) throws Exception {
+		return dao.login(vo);
 	}
 
 }
