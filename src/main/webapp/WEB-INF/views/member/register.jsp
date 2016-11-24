@@ -22,8 +22,7 @@
 
 	<button id="rBtn">SINGUP</button>
 
-  <div class="container" style="background-color:#f1f1f1">
-  </div>
+	</div>
 </form>
 
 
