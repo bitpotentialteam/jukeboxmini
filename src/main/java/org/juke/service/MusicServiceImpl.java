@@ -9,13 +9,13 @@ import org.juke.dao.MusicDAO;
 import org.juke.domain.MemberVO;
 import org.juke.domain.MusicVO;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class MusicServiceImpl implements MusicService  {
 
 	@Inject
 	MusicDAO dao;
-	
 	
 	@Override
 	public void register(MusicVO vo) throws Exception {

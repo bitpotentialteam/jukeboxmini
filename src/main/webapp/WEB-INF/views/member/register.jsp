@@ -8,5 +8,22 @@
 </head>
 <body>
 
+<form action="../playList">
+
+  <div class="container">
+    <label><b>USER ID</b></label>
+    <input type="text" name="userid" >
+
+    <label><b>USER PW</b></label>
+    <input type="password" name="userpw">
+
+	<label><b>NICK NAME</b></label>
+    <input type="text" name="nick" >
+
+
+  <div class="container" style="background-color:#f1f1f1">
+  </div>
+</form>
+
 </body>
 </html>
