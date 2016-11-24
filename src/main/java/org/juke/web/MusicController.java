@@ -57,4 +57,8 @@ public class MusicController {
 		service.delete(mno);
 	}
 
+	@PostMapping("/playlist")
+	public void playList() throws Exception {
+	}
+
 }

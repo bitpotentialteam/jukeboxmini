@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<h1> 마이페이지ㅣㅇ람ㄹ이ㅏㅁ;어ㅏㅁㄴㅇ</h1>
 
 </body>
 </html>

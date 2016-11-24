@@ -9,7 +9,7 @@
 <body>
 
 
-<form action="signup" method="post">
+<form action="../music/playlist" method="post">
 
   <div class="container">
     <label><b>USER ID</b></label>
@@ -21,7 +21,7 @@
 	<label><b>NICK NAME</b></label>
     <input type="text" name="nick" >
 
-	<button id="rBtn">SIGN UP</button>
+	<input type="submit">
 
 	</div>
 </form>

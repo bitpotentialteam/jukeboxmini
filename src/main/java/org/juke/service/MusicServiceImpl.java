@@ -55,7 +55,9 @@ public class MusicServiceImpl implements MusicService  {
 		return dao.getCount();
 	}
 	
-	
+	public void playList() throws Exception{
+		
+	}
 	
 
 }

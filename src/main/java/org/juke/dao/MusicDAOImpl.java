@@ -13,6 +13,8 @@ public class MusicDAOImpl extends AbstractDAO<MusicVO, Integer> implements Music
 		
 	}
 	
-
+	public void playList() throws Exception{
+		
+	}
 
 }
