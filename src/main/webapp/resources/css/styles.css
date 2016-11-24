@@ -16,7 +16,7 @@ body::before {
        (max-width: 1024px) and (-webkit-max-device-pixel-ratio: 1.5),
        (max-width: 1024px) and (max-resolution: 1.5dppx) {
   body::before {
-    background-image: url('images/background.jpg');
+    background-image: url('../images/background.jpg');
   }
 }
 @media (min-width: 513px)  and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 1.5),
@@ -24,7 +24,7 @@ body::before {
        (min-width: 1025px) and (max-width: 2048px) and (-webkit-max-device-pixel-ratio: 1.5),
        (min-width: 1025px) and (max-width: 2048px) and (max-resolution: 1.5dppx)  {
   body::before {
-    background-image: url('images/background.jpg');
+    background-image: url('../images/background.jpg');
   }
 }
 @media (min-width: 1025px) and (-webkit-min-device-pixel-ratio: 1.5),
@@ -32,7 +32,7 @@ body::before {
        (min-width: 2049px) and (-webkit-max-device-pixel-ratio: 1.5),
        (min-width: 2049px) and (max-resolution: 1.5dppx) {
   body::before {
-    background-image: url('images/background.jpg');
+    background-image: url('../images/background.jpg');
   }
 }
 body .demo-blog {
@@ -183,7 +183,7 @@ body .demo-blog {
           order: -1;
 }
 .demo-blog .coffee-pic .mdl-card__media {
-  background-image: url('images/coffee.jpg');
+  background-image: url('../images/coffee.jpg');
 }
 .demo-blog .something-else .mdl-card__media {
   display: -webkit-flex;
@@ -223,10 +223,10 @@ body .demo-blog {
   border-bottom-right-radius: 2px;
 }
 .demo-blog .on-the-road-again .mdl-card__media {
-  background-image: url('images/road.jpg');
+  background-image: url('../images/road.jpg');
 }
 .demo-blog .shopping .mdl-card__media {
-  background-image: url('images/shopping.jpg');
+  background-image: url('../images/shopping.jpg');
 }
 .demo-blog .demo-blog__posts > .demo-nav {
   margin: 12px 15px;
@@ -286,7 +286,7 @@ body .demo-blog {
 }
 /* top card background size */
 .demo-blog--blogpost .demo-blog__posts > .mdl-card .mdl-card__media {
-  background-image: url('images/lpbg.jpg');
+  background-image: url('../images/lpbg.jpg');
   height: 100px;
 }
 .demo-blog--blogpost .comments {
@@ -452,7 +452,7 @@ body .demo-blog {
 .demo-blog .minilogo {
   width: 44px;
   height: 44px;
-  background-image: url('images/avatar.png');
+  background-image: url('../images/avatar.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: 50%;
@@ -481,13 +481,13 @@ body .demo-blog {
   border-radius: 2px;
 }
 .social-btn__twitter {
-  background-image: url('https://www.gstatic.com/images/icons/material/system/2x/post_twitter_black_24dp.png');
+  background-image: url('https://www.gstatic.com/../images/icons/material/system/2x/post_twitter_black_24dp.png');
 }
 .social-btn__blogger {
-  background-image: url('https://www.gstatic.com/images/icons/material/system/2x/post_facebook_black_24dp.png');
+  background-image: url('https://www.gstatic.com/../images/icons/material/system/2x/post_facebook_black_24dp.png');
 }
 .social-btn__gplus {
-  background-image: url('https://www.gstatic.com/images/icons/material/system/2x/post_gplus_black_24dp.png');
+  background-image: url('https://www.gstatic.com/../images/icons/material/system/2x/post_gplus_black_24dp.png');
 }
 .social-btn__share {
   color: rgba(0, 0, 0, 0.54);
@@ -574,7 +574,7 @@ body .demo-blog {
     width: 200px;
     height: 200px;
     position: absolute;
-    background: url('images/album/bob-marley-cd-cover-art.jpg') no-repeat right top;
+    background: url('../images/album/bob-marley-cd-cover-art.jpg') no-repeat right top;
 }
 
 #wrapper #list1{
