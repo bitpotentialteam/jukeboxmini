@@ -39,6 +39,11 @@ public class MusicController {
 
 		return service.search(mno);
 	}
+	
+	@GetMapping("/register")
+	public void musicRegister() throws Exception {
+	
+	}
 
 	@PostMapping("/register")
 	public void musicRegister(@RequestBody MusicVO vo) throws Exception {
