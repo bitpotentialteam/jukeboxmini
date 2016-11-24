@@ -60,5 +60,9 @@ public class MusicController {
 	@PostMapping("/playlist")
 	public void playList() throws Exception {
 	}
+	
+	@GetMapping("/playlist")
+	public void getPlayList() throws Exception {
+	}
 
 }
