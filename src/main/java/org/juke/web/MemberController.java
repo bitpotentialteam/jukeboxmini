@@ -48,11 +48,11 @@ public class MemberController {
 	}
 
 	@PostMapping("/login")
-	public String postLogin (MemberVO vo, Model model, HttpServletRequest request) throws Exception {
+	public String postLogin (MemberVO vo, Model model, HttpSession session) throws Exception {
 		
 		MemberVO login = service.login(vo);
 		
-		HttpSession session = request.getSession();
+
 		
 		if (login != null) {
 			model.addAttribute("value", vo);
