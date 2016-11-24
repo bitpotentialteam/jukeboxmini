@@ -68,8 +68,13 @@ public class MemberController {
 
 	}
 
-	@PostMapping
-	public void logout() {
+	@GetMapping
+	public String logout(HttpSession session) {
+		
+		session.removeAttribute("LOGIN");
+		session.invalidate();
+		
+		return "member/login";
 
 	}
 }
