@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<form action="../playList">
+<form action="../playList" method="post">
 
   <div class="container">
     <label><b>USER ID</b></label>
