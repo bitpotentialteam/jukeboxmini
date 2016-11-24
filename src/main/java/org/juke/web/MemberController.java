@@ -1,6 +1,8 @@
 package org.juke.web;
 
 import javax.inject.Inject;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.juke.domain.MemberVO;
 import org.juke.service.MemberService;
@@ -13,9 +15,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 @Service
 @CrossOrigin
@@ -48,12 +48,16 @@ public class MemberController {
 	}
 
 	@PostMapping("/login")
-	public String postLogin (MemberVO vo, Model model) throws Exception {
+	public String postLogin (MemberVO vo, Model model, HttpServletRequest request) throws Exception {
 		
 		MemberVO login = service.login(vo);
 		
+		HttpSession session = request.getSession();
+		
 		if (login != null) {
 			model.addAttribute("value", vo);
+			session.setAttribute("LOGIN", vo);
+			
 			return "music/playlist";
 
 		} else {
