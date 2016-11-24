@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Service
 @CrossOrigin
@@ -22,37 +23,38 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/member/*")
 public class MemberController {
 
-   private static final Logger logger = LoggerFactory.getLogger(MemberController.class);
-   
-   @Inject
-   MemberService service = new MemberServiceImpl();
-   
-   
-   @GetMapping("/signup")
-   public void getSignup() throws Exception {
-	   
-   }
-   
-   
-   @PostMapping("/signup")
-   public void signup(@RequestBody MemberVO vo) throws Exception {
-	   service.signup(vo);
+	private static final Logger logger = LoggerFactory.getLogger(MemberController.class);
+
+	@Inject
+	MemberService service = new MemberServiceImpl();
+
+	@GetMapping("/signup")
+	public void getSignup() throws Exception {
+
+	}
+
+	@PostMapping("/signup")
 	
-   }
+	public String signup( MemberVO vo) throws Exception {
+		service.signup(vo);
+		
+		return "music/playlist";
 
-   @GetMapping("/login")
-   public void getLogin() {
-	   
-   }
+	}
 
-   @PostMapping("/login")
-   public void registPOST(@RequestBody MemberVO vo, Model model) throws Exception{
-	  service.login(vo);
-      model.addAttribute("value", vo);
-   }
-   
-   @PostMapping
-   public void logout(){
-     
-   }
+	@GetMapping("/login")
+	public void getLogin() {
+
+	}
+
+	@PostMapping("/login")
+	public void registPOST(@RequestBody MemberVO vo, Model model) throws Exception {
+		service.login(vo);
+		model.addAttribute("value", vo);
+	}
+
+	@PostMapping
+	public void logout() {
+
+	}
 }

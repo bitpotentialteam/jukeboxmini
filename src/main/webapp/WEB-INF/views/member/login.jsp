@@ -8,24 +8,5 @@
 </head>
 <body>
 
-
-<form action="signup" method="POST">
-
-  <div class="container">
-    <label><b>USER ID</b></label>
-    <input type="text" name="userid" >
-
-    <label><b>USER PW</b></label>
-    <input type="password" name="userpw">
-
-	<label><b>NICK NAME</b></label>
-    <input type="text" name="nick" >
-
-	<input type="submit">
-
-	</div>
-</form>
-
-
 </body>
 </html>
