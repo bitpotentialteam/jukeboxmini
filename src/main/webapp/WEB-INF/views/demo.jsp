@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset="UTF-8"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,7 +33,7 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
               rel="stylesheet">
         <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.grey-orange.min.css">
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="resources/css/styles.css">
         <style>
             #view-source {
                 position: fixed;
