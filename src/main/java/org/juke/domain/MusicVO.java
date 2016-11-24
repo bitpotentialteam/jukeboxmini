@@ -2,13 +2,15 @@ package org.juke.domain;
 
 import java.util.Date;
 
+import org.springframework.web.multipart.MultipartFile;
+
 public class MusicVO {
 	
 	
 	private Integer mno;
 	private String title, singer, album, jacket, userid, imageType;
 	private Date regdate, updatedate;
-	
+
 	
 	public Integer getMno() {
 		return mno;

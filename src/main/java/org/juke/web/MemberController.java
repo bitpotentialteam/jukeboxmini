@@ -36,6 +36,7 @@ public class MemberController {
 	@PostMapping("/signup")
 	
 	public String signup( MemberVO vo) throws Exception {
+		
 		service.signup(vo);
 		
 		return "redirect:../music/playlist";
