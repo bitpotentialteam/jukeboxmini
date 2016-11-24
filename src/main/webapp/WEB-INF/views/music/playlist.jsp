@@ -285,11 +285,11 @@
 		
 		var uploadedList = $(".uploadedList");
 						 // 두 개의 이벤트가 같이 먹는다.
-		$(".fileDrop").on("dragenter dragover ", function(event){
+		$("#turntable-1").on("dragenter dragover ", function(event){
 			event.preventDefault();
 		});
 						 
-		$(".fileDrop").on("drop", function(event){
+		$("#turntable-1").on("drop", function(event){
 			event.preventDefault();
 			
 			var files = event.originalEvent.dataTransfer.files;
@@ -312,9 +312,9 @@
 				processData:false,
 				success:function(data){
 					console.log(data);
-					//alert(data);
+					alert(data);
 					//uploadedList.append("<img src=show?name=" + data + ">");
-					uploadedList.html("<img src=show?name=" + data + ">");
+					//uploadedList.html("<img src=show?name=" + data + ">");
 				}
 			});	
 			
