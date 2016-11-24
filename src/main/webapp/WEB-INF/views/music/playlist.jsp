@@ -243,9 +243,9 @@
    
 <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
 
-<script src="resources/js/soundmanager2.js"></script>
-<script src="resources/js/turntable-app.js"></script>
-<script src="resources/js/turntable.js"></script>
+<script src="../resources/js/soundmanager2.js"></script>
+<script src="../resources/js/turntable-app.js"></script>
+<script src="../resources/js/turntable.js"></script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 
