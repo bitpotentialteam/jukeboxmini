@@ -10,7 +10,8 @@
 		values (#{userid}, #{userpw}, #{nick})
 	</insert>
 
-	<select id="login" parameterType="MemberVO">
+
+	<select id="login" parameterType="MemberVO" resultType="MemberVO">
 		select * from tbl_member
 		where userid=#{userid} and userpw=#{userpw}
 	</select>
