@@ -76,14 +76,14 @@
 					<!--  Form tag등, 원하는 형식을 p tag에 삽입. -->
 					<div class="mdl-color-text--grey-700 mdl-card__supporting-text">
 
-						<form action="signup" method="POST">
+						<form action="signup" method="POST" id="signup">
 
 							<div class="container">
 								<label><b>USER ID</b></label> <input type="text" name="userid">
 
 								<label><b>USER PW</b></label> <input type="password"
 									name="userpw"> <label><b>NICK NAME</b></label> <input
-									type="text" name="nick"> <input type="submit">
+									type="text" name="nick"> <button id="signupBtn"> GO! </button>
 
 							</div>
 						</form>
@@ -102,6 +102,17 @@
 		<div class="mdl-layout__obfuscator"></div>
 	</div>
 	<script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+	
+	<script>
+	
+	$("#signupBtn").on("click", function(event){
+
+	$("#signup").attr("action","../music/playlist");
+
+});
+
+	
+	</script>
 
 </body>
 </html>
