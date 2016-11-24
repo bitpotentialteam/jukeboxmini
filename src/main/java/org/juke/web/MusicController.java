@@ -38,7 +38,7 @@ public class MusicController {
 	public MusicVO musicView(@PathVariable("mno") Integer mno) throws Exception {
 
 		return service.search(mno);
-	}
+	}  
 
 	@PostMapping("/register")
 	public void musicRegister(MusicVO vo) throws Exception {
