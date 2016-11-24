@@ -47,10 +47,10 @@ public class MusicController {
    public void musicRegister(MusicVO vo) throws Exception{
       service.register(vo);
    }
+
    
-   @PutMapping("/modify/{mno}")
-   @PatchMapping ("/modify/{mno}")
-   public void musicModify(MusicVO vo) throws Exception{
+   @PostMapping ("/modify/{mno}")
+   public void musicModify(@PathVariable("mno") Integer mno, MusicVO vo) throws Exception{
       service.modify(vo);
    }
    
