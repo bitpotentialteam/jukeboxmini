@@ -45,17 +45,17 @@
             right: 0;
             bottom: 0;
             margin-right: 40px;
-            margin-bottom: 40px;
+            margin-bottom: 650px;
             z-index: 900;
         }
         
          #view-source2 {
             position: fixed;
             display: block;
-            right: 100;
+            right: 0;
             bottom: 0;
-            margin-right: 40px;
-            margin-bottom: 40px;
+            margin-right: 150px;
+            margin-bottom: 650px;
             z-index: 900;
         }
         
