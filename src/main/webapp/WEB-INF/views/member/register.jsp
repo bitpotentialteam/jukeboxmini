@@ -8,6 +8,7 @@
 </head>
 <body>
 
+<<<<<<< HEAD
 <form action="../playList">
 
   <div class="container">
@@ -24,6 +25,9 @@
   <div class="container" style="background-color:#f1f1f1">
   </div>
 </form>
+=======
+
+>>>>>>> branch 'master' of https://github.com/bitpotentialteam/jukeboxmini.git
 
 </body>
 </html>
