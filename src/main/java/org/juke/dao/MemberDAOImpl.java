@@ -13,16 +13,9 @@ public class MemberDAOImpl extends AbstractDAO<MemberVO, String> implements Memb
 
 	}
 
-	public boolean login(MemberVO vo) throws Exception {
+	public MemberVO login(MemberVO vo) throws Exception {
 
-		Object login = sqlSession.selectOne(NAME + ".login", vo);
-
-		if (login != null) {
-			return true;
-
-		} else {
-			return false;
-		}
+		return sqlSession.selectOne(NAME + ".login", vo);
 	}
 
 }

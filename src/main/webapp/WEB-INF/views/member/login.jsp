@@ -29,11 +29,6 @@
 
 
 	
-		$("#loginBtn").on("click", function(event){
-
-		$("#login").attr({action:'../music/playlist',method:'post'});
-
-	});
 
 
 

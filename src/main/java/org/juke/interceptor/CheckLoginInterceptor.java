@@ -23,7 +23,7 @@ public class CheckLoginInterceptor extends HandlerInterceptorAdapter {
 			return true;
 		}
 
-		response.sendRedirect("login");
+		response.sendRedirect(" ");
 		return false;
 	}
 
