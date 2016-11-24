@@ -47,7 +47,7 @@ public class MusicController {
    public void musicRegister(MusicVO vo) throws Exception{
       service.register(vo);
    }
-
+     
    
    @PostMapping ("/modify/{mno}")
    public void musicModify(@PathVariable("mno") Integer mno, MusicVO vo) throws Exception{
