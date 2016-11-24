@@ -13,50 +13,48 @@ import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@CrossOrigin   
-@RestController 
+@CrossOrigin
+@RestController
 @RequestMapping("/music/*")
 public class MusicController {
 
-   private static final Logger logger = LoggerFactory.getLogger(MusicController.class);
-   
-   @Inject
-   MusicService service = new MusicServiceImpl();
-   
-   @GetMapping("/list/{page}")
-   public List<MusicVO> musicList(@PathVariable Integer page) throws Exception{
-      
-      return service.list(page);
-   }
-   
-   @GetMapping("/view/{mno}")
-   public MusicVO musicView(@PathVariable("mno") Integer mno) throws Exception{
-      
-      return service.search(mno);
-   }
-   
-   
-   @PostMapping("/register")
-   public void musicRegister(MusicVO vo) throws Exception{
-      service.register(vo);
-   }
-   
-   @PostMapping("/modify/{mno}")
-   public void musicModify(@PathVariable("mno") Integer mno, MusicVO vo) throws Exception{
-        
-	   service.modify(vo);
-      
-   }
-   
-   @DeleteMapping("/delete/{mno}")
-   public void musicDelete(@PathVariable("mno") Integer mno) throws Exception{
-      service.delete(mno);
-   }
+	private static final Logger logger = LoggerFactory.getLogger(MusicController.class);
+
+	@Inject
+	MusicService service = new MusicServiceImpl();
+
+	@GetMapping("/list/{page}")
+	public List<MusicVO> musicList(@PathVariable Integer page) throws Exception {
+
+		return service.list(page);
+	}
+
+	@GetMapping("/view/{mno}")
+	public MusicVO musicView(@PathVariable("mno") Integer mno) throws Exception {
+
+		return service.search(mno);
+	}
+
+	@PostMapping("/register")
+	public void musicRegister(MusicVO vo) throws Exception {
+		service.register(vo);
+	}
+
+	@PostMapping("/modify/{mno}")
+	public void musicModify(@PathVariable("mno") Integer mno, MusicVO vo) throws Exception {
+
+		service.modify(vo);
+
+	}
+
+	@DeleteMapping("/delete/{mno}")
+	public void musicDelete(@PathVariable("mno") Integer mno) throws Exception {
+		service.delete(mno);
+	}
+
 }
