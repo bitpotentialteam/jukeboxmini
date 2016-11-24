@@ -55,7 +55,7 @@
             .mdl-grid .mdl-card {
                 background:
                         url("http://www.cinema4d.co.kr/files/attach/images/119/631/143/001/2010-07-27%2022;33;56.jpg");
-                background-size: 500px 500px;
+                background-size: 100% 100% ;
             }
 
 
@@ -120,9 +120,7 @@
                                     </li>
                                 </ul>
                                 <div class="box-footer">
-                                    <button class="mdl-button mdl-js-button mdl-js-ripple-effect">
-                                        register
-                                    </button>
+                                    <button class="mdl-button mdl-js-button mdl-js-ripple-effect">register</button>
                                 </div>
                             </form>
                         </div>

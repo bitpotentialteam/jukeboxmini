@@ -683,4 +683,8 @@ form ul li {
     padding: 0 1em 1em;
 }
 
+.container .mdl-textfield__label{
+    color: rgba(0, 0, 0, 0.4);
+}
+
 

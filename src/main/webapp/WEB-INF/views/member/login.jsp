@@ -52,6 +52,12 @@
 	margin-bottom: 40px;
 	z-index: 900;
 }
+
+.mdl-grid .mdl-card {
+	background:
+		url("http://www.cinema4d.co.kr/files/attach/images/119/631/143/001/2010-07-27%2022;33;56.jpg");
+	background-size: 100% 100%;
+}
 </style>
 </head>
 
@@ -79,11 +85,21 @@
 						<form action="login" method="POST" id="login">
 
 							<div class="container">
-								<label><b>USER ID</b></label> <input type="text" name="userid">
 
-								<label><b>USER PW</b></label> <input type="password"
-									name="userpw"> 
-									<button id="loginBtn"> 로긴 </button>
+								<div class="mdl-textfield mdl-js-textfield">
+									<input class="mdl-textfield__input" type="text" id="input1"
+										name="userid"> <label class="mdl-textfield__label"
+										for="input1"><b>USER ID</b></label>
+								</div>
+								<div class="mdl-textfield mdl-js-textfield">
+									<input class="mdl-textfield__input" type="password" id="input2"
+										name="userpw"> <label class="mdl-textfield__label"
+										for="input2"><b>USER PW</b></label>
+								</div>
+
+
+								<button class="mdl-button mdl-js-button mdl-js-ripple-effect">LOGIN</button>
+
 
 							</div>
 						</form>
@@ -102,16 +118,13 @@
 		<div class="mdl-layout__obfuscator"></div>
 	</div>
 	<script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
-	
+
 	<script>
-	
-	$("#loginBtn").on("click", function(event){
+		$("#loginBtn").on("click", function(event) {
 
-	$("#login").attr("action","../music/playlist");
+			$("#login").attr("action", "../music/playlist");
 
-});
-
-	
+		});
 	</script>
 
 </body>
