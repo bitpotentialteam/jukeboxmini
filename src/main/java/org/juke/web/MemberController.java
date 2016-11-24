@@ -38,7 +38,7 @@ public class MemberController {
 	public String signup( MemberVO vo) throws Exception {
 		service.signup(vo);
 		
-		return "music/playlist";
+		return "redirect:../music/playlist";
 
 	}
 
@@ -58,10 +58,10 @@ public class MemberController {
 			model.addAttribute("value", vo);
 			session.setAttribute("LOGIN", vo);
 			
-			return "music/playlist";
+			return "redirect:../music/playlist";
 
 		} else {
-			return "member/login";
+			return "redirect:../member/login";
 		}
 		
 		 
@@ -74,7 +74,7 @@ public class MemberController {
 		session.removeAttribute("LOGIN");
 		session.invalidate();
 		
-		return "music/playlist";
+		return "redirect:../music/playlist";
 
 	}
 }
