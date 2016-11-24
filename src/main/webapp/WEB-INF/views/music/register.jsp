@@ -79,7 +79,7 @@
 			<div class="demo-back">
 				<a
 					class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
-					href="index.html" title="go back" role="button"> <i
+					href="../music/playlist" title="go back" role="button"> <i
 					class="material-icons" role="presentation">arrow_back</i>
 				</a>
 			</div>
