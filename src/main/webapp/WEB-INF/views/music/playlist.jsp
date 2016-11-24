@@ -222,8 +222,10 @@
     </main>
     <div class="mdl-layout__obfuscator"></div>
 </div>
-<a href="#" target="_blank" id="view-source"
-   class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--white">LOGIN</a>
+<form action='member/login' target="_blank" id="view-source"
+   class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--white">LOGIN</form>
+   
+   
 <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
 
 <script src="/js/soundmanager2.js"></script>

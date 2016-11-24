@@ -48,9 +48,11 @@ public class MemberController {
 	}
 
 	@PostMapping("/login")
-	public void registPOST(@RequestBody MemberVO vo, Model model) throws Exception {
+	public String registPOST(@RequestBody MemberVO vo, Model model) throws Exception {
 		service.login(vo);
 		model.addAttribute("value", vo);
+		
+		return "music/playlist";
 	}
 
 	@PostMapping

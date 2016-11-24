@@ -8,5 +8,24 @@
 </head>
 <body>
 
+
+<form action="login" method="POST">
+
+<h1> L O G I N </h1>
+
+  <div class="container">
+    <label><b>USER ID</b></label>
+    <input type="text" name="userid" >
+
+    <label><b>USER PW</b></label>
+    <input type="password" name="userpw">
+
+
+	<input type="submit">
+
+	</div>
+</form>
+
+
 </body>
 </html>
