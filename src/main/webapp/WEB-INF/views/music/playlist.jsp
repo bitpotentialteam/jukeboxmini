@@ -44,9 +44,8 @@
             position: fixed;
             display: block;
             right: 0;
-            bottom: 0;
+            top: 0;
             margin-right: 40px;
-            margin-bottom: 650px;
             z-index: 900;
         }
         
@@ -54,9 +53,8 @@
             position: fixed;
             display: block;
             right: 0;
-            bottom: 0;
+            top: 0;
             margin-right: 150px;
-            margin-bottom: 650px;
             z-index: 900;
         }
         
