@@ -36,8 +36,8 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
           rel="stylesheet">
     <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.grey-orange.min.css">
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/css/turntable.css">
+    <link rel="stylesheet" href="resources/css/styles.css">
+    <link rel="stylesheet" href="resources/css/turntable.css">
     <style>
         #view-source {
             position: fixed;
@@ -227,9 +227,9 @@
    
 <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
 
-<script src="/js/soundmanager2.js"></script>
-<script src="/js/turntable-app.js"></script>
-<script src="/js/turntable.js"></script>
+<script src="resources/js/soundmanager2.js"></script>
+<script src="resources/js/turntable-app.js"></script>
+<script src="resources/js/turntable.js"></script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 
