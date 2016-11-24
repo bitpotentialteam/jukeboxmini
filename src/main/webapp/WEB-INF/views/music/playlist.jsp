@@ -144,7 +144,7 @@
                         <div class="table-bg"></div>
 
                         <!-- image that sets the base dimensions-->
-                        <img src="images/turn/tt_case_and_lighting.png" alt="" class="stub">
+                        <img src="../resources/images/turn/tt_case_and_lighting.png" alt="" class="stub">
 
                         <div class="bd">
 
