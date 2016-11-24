@@ -74,7 +74,7 @@ public class MemberController {
 		session.removeAttribute("LOGIN");
 		session.invalidate();
 		
-		return "member/login";
+		return "music/playlist";
 
 	}
 }

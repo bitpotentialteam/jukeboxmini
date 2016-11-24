@@ -71,6 +71,7 @@
 </head>
 
 <body>
+<<<<<<< HEAD
 
 	
 		<div
@@ -131,5 +132,8 @@
 
 	<script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
 
+=======
+<h1>register</h1>
+>>>>>>> branch 'master' of https://github.com/bitpotentialteam/jukeboxmini.git
 </body>
 </html>

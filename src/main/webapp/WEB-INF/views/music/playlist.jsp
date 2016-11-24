@@ -332,7 +332,8 @@
 $("#view-source").attr('href','../member/logout');
 $("#view-source").html('LOGOUT');
 
-$("#view-source2").remove();
+$("#view-source2").attr('href','../music/register');
+$("#view-source2").html('Register');
 
 
 </script>
