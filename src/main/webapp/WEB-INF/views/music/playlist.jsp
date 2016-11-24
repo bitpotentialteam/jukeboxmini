@@ -107,15 +107,14 @@
 
                     <div id="container">
                         <div id="wrapper">
-                            <p class="one">1</p>
-                            <p class="two">2</p>
-                            <p class="three">3</p>
-                            <p class="four">4</p>
-                            <p class="five">5</p>
-                            <p class="six">6</p>
-                            <p class="seven">7</p>
-                            <p class="eight">8</p>
-
+                            <div class="listcard" id="list1"></div>
+                            <div class="listcard" id="list2"></div>
+                            <div class="listcard" id="list3"></div>
+                            <div class="listcard" id="list4"></div>
+                            <div class="listcard" id="list5"></div>
+                            <div class="listcard" id="list6"></div>
+                            <div class="listcard" id="list7"></div>
+                            <div class="listcard" id="list8"></div>
                         </div>
                     </div>
 
@@ -261,6 +260,51 @@
         });
 
     });
+</script>
+
+<script>
+//drag&drop
+	// 파일을 드래그해서 새 창이 열리는 event를 막아준다. ==> 3개의 이벤트를 2번에 나눠 막음. why? drop event시 ajax를 호출하기 위해.
+	$(document).ready(function(){
+		
+		var uploadedList = $(".uploadedList");
+						 // 두 개의 이벤트가 같이 먹는다.
+		$(".fileDrop").on("dragenter dragover ", function(event){
+			event.preventDefault();
+		});
+						 
+		$(".fileDrop").on("drop", function(event){
+			event.preventDefault();
+			
+			var files = event.originalEvent.dataTransfer.files;
+			var file = files[0];
+			
+			console.log(file);
+			
+			var formData = new FormData();	// javascript로 form tag를 만든다고 생각. but 브라우저의 호환이 좋지 않다.
+			formData.append("file", file);	// "file" 형식의 file을 추가.
+			
+			console.log(formData);
+			
+			$.ajax({	// ajax로 처리하는 이유는 옵션을 추가해줘야 동작한다.
+				
+				url:"uploadFile",
+				data:formData,	// data Type을 formData로 주면 기본으로 데이터 타입이 multipart로 전달.
+				dataType:'text',
+				type:"post",
+				contentType:false,
+				processData:false,
+				success:function(data){
+					console.log(data);
+					//alert(data);
+					//uploadedList.append("<img src=show?name=" + data + ">");
+					uploadedList.html("<img src=show?name=" + data + ">");
+				}
+			});	
+			
+		});
+		
+	});
 </script>
 
 
