@@ -71,7 +71,6 @@
 </head>
 
 <body>
-<<<<<<< HEAD
 
 	
 		<div
@@ -132,8 +131,48 @@
 
 	<script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
 
-=======
-<h1>register</h1>
->>>>>>> branch 'master' of https://github.com/bitpotentialteam/jukeboxmini.git
+	<script>
+	$(document).ready(function(){
+		
+		var uploadedList = $(".uploadedList");
+
+		$("#turntable-1").on("dragenter dragover ", function(event){
+			event.preventDefault();
+		});
+						 
+		$("#turntable-1").on("drop", function(event){
+			event.preventDefault();
+			
+			var files = event.originalEvent.dataTransfer.files;
+			var file = files[0];
+			
+			console.log(file);
+			
+			var formData = new FormData();	// javascript로 form tag를 만든다고 생각. but 브라우저의 호환이 좋지 않다.
+			formData.append("file", file);	// "file" 형식의 file을 추가.
+			
+			console.log(formData);
+			
+			$.ajax({	// ajax로 처리하는 이유는 옵션을 추가해줘야 동작한다.
+				
+				url:"uploadFile",
+				data:formData,	// data Type을 formData로 주면 기본으로 데이터 타입이 multipart로 전달.
+				dataType:'text',
+				type:"post",
+				contentType:false,
+				processData:false,
+				success:function(data){
+					console.log(data);
+					alert(data);
+					//uploadedList.append("<img src=show?name=" + data + ">");
+					//uploadedList.html("<img src=show?name=" + data + ">");
+				}
+			});	
+			
+		});
+		
+	});
+</script>
+
 </body>
 </html>
