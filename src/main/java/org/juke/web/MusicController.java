@@ -49,8 +49,18 @@ public class MusicController {
    
    @PutMapping("/modify/{mno}")
    @PatchMapping("/modify/{mno}")
-   public void musicModify(MusicVO vo) throws Exception{
-      service.modify(vo);
+   public void musicModify(@PathVariable("mno") Integer mno) throws Exception{
+      
+	   MusicVO vo = new MusicVO();
+	   vo.setMno(mno);
+	   vo.setTitle("go home");
+	   vo.setSinger("gpgpgp");
+	   vo.setJacket("dzd");
+	   vo.setAlbum("dfdf");
+	   
+	   service.modify(vo);
+      
+      
    }
    
    @DeleteMapping("/delete/{mno}")
