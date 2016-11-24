@@ -47,7 +47,7 @@ public class MusicController {
       service.register(vo);
    }
    
-   @PutMapping
+   @PutMapping("/modify/{mno}")
    @PatchMapping("/modify/{mno}")
    public void musicModify(MusicVO vo) throws Exception{
       service.modify(vo);
