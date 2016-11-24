@@ -3,13 +3,12 @@ package org.juke.web;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStream;
-import java.util.UUID;
 
 import org.apache.commons.io.IOUtils;
+import org.juke.util.ImageUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
-import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -21,15 +20,19 @@ public class ImageController {
 	private static final Logger logger = LoggerFactory.getLogger(ImageController.class);
 
 	@PostMapping("/uploadFile")
-	@ResponseBody // return°ªÀÌ ¼ø¼öÇÑ ¹®ÀÚ¿­ÀÓÀ» ¾Ë·ÁÁØ´Ù.
+	@ResponseBody // returnï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú¿ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ë·ï¿½ï¿½Ø´ï¿½.
 	public String uploadFile(MultipartFile file) throws Exception {
 
-		UUID uid = UUID.randomUUID();
-
-		String fileName = file.getOriginalFilename();
-
-		String uploadName = uid + "_" + fileName;
-
+//		UUID uid = UUID.randomUUID();
+//
+//		String fileName = file.getOriginalFilename();
+//
+//		String uploadName = uid + "_" + fileName;
+		
+		ImageUtil util = new ImageUtil();
+		
+		String uploadName = util.setImageName(file);
+		
 		FileOutputStream fos = new FileOutputStream("C:\\zzz\\" + uploadName);
 
 		IOUtils.copy(file.getInputStream(), fos);
