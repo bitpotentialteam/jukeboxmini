@@ -612,3 +612,78 @@ body .demo-blog {
     -webkit-transform:rotateY(315deg) translateZ(250px) ;
 
 }
+
+@media (min-width: 992px){
+    .col-md-7 {
+        width: 55%;
+    }
+    .col-md-5 {
+        width: 40%;
+    }
+    .col-md-5, .col-md-7 {
+        float: left;
+    }
+}
+
+.col-md-7 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    border: 3px dotted black;
+    width: 430px;
+    height: 430px;
+    text-align: center;
+
+}
+
+.col-md-7 p{
+    position: relative;
+    top: 100px;
+    font-size: 3em;
+    font-weight: bold;
+    padding: 20px;
+    text-overflow: clip;
+}
+
+.col-md-5 {
+    position: absolute;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    left: 55%;
+}
+
+.col-md-5 .mdl-textfield.is-focused .mdl-textfield__input {
+    outline: none;
+}
+
+.col-md-5 .mdl-textfield__input {
+    border-bottom: ;
+}
+
+.col-md-5 .mdl-textfield__label{
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.box-footer .mdl-button {
+    margin-left: 65%;
+}
+
+.row:before {
+    display: table;
+    content: " ";
+}
+
+.row:after {
+    clear: both;
+    display: table;
+    content: " ";
+}
+
+form ul li {
+    list-style: none;
+    padding: 0 1em 1em;
+}
+
+
