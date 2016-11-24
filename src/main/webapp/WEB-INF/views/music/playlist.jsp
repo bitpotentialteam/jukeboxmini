@@ -330,7 +330,9 @@
 <script>
 
 $("#view-source").attr('href','../member/logout');
+$("#view-source").html('LOGOUT');
 
+$("#view-source2").remove();
 
 
 </script>
