@@ -28,10 +28,16 @@ public class MemberController {
    MemberService service = new MemberServiceImpl();
    
    
+   @GetMapping("/signup")
+   public void getSignup() throws Exception {
+	   
+   }
+   
    
    @PostMapping("/signup")
    public void signup(@RequestBody MemberVO vo) throws Exception {
 	   service.signup(vo);
+	
    }
 
    @GetMapping("/login")
