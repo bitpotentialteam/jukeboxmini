@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>Play List</title>
 
  <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -332,14 +332,19 @@
 $("#view-source").attr('href','../member/logout');
 $("#view-source").html('LOGOUT');
 
+$("#view-source").on("click",function(event){
+	
+	alert("로그아웃하셔씀다");
+})
+
 $("#view-source2").attr('href','../music/register');
 $("#view-source2").html('Register');
 
-
 </script>
 
-
 </c:if>
+
+
 
 
 
