@@ -289,8 +289,13 @@ body .demo-blog {
   background-image: url('../images/lpbg.jpg');
   height: 100px;
 }
+
+/* comment background */
 .demo-blog--blogpost .comments {
   background-color: #EEE;
+  background:
+		url("http://www.cinema4d.co.kr/files/attach/images/119/631/143/001/2010-07-27%2022;33;56.jpg");
+	background-size: 100% 100%;
 }
 .demo-blog--blogpost .meta > * {
   -webkit-align-items: center;
