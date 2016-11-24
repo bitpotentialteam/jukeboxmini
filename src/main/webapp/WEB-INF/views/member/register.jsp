@@ -8,7 +8,6 @@
 </head>
 <body>
 
-<<<<<<< HEAD
 <form action="../playList">
 
   <div class="container">
@@ -21,13 +20,12 @@
 	<label><b>NICK NAME</b></label>
     <input type="text" name="nick" >
 
+	<button id="rBtn">SINGUP</button>
 
   <div class="container" style="background-color:#f1f1f1">
   </div>
 </form>
-=======
 
->>>>>>> branch 'master' of https://github.com/bitpotentialteam/jukeboxmini.git
 
 </body>
 </html>
