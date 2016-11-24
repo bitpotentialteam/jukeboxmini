@@ -13,12 +13,12 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 @Service
 @CrossOrigin
-@RestController
+@Controller
 @RequestMapping("/member/*")
 public class MemberController {
 
@@ -30,7 +30,7 @@ public class MemberController {
    
    
    @PostMapping("/signup")
-   public void signup(MemberVO vo) throws Exception {
+   public void signup(@RequestBody MemberVO vo) throws Exception {
 	   service.signup(vo);
    }
 
@@ -40,7 +40,7 @@ public class MemberController {
    }
 
    @PostMapping("/login")
-   public void registPOST(MemberVO vo, Model model) throws Exception{
+   public void registPOST(@RequestBody MemberVO vo, Model model) throws Exception{
 	  service.login(vo);
       model.addAttribute("value", vo);
    }

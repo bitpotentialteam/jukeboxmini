@@ -7,13 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-<<<<<<< HEAD
 
-<form action="../playList">
-=======
 
-<form action="../playList" method="post">
->>>>>>> branch 'master' of https://github.com/bitpotentialteam/jukeboxmini.git
+<form action="signup" method="post">
 
   <div class="container">
     <label><b>USER ID</b></label>
@@ -25,15 +21,11 @@
 	<label><b>NICK NAME</b></label>
     <input type="text" name="nick" >
 
-	<button id="rBtn">SINGUP</button>
+	<button id="rBtn">SIGN UP</button>
 
 	</div>
 </form>
-<<<<<<< HEAD
 
-=======
-
->>>>>>> branch 'master' of https://github.com/bitpotentialteam/jukeboxmini.git
 
 </body>
 </html>

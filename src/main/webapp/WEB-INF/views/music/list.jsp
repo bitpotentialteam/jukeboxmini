@@ -8,7 +8,11 @@
 </head>
 <body>
 
-<H1> gdgd </H1>
+<ul>
+	<c:forEach items="${list}" var="vo" >
+	<li>${vo.bno} <a href="${vo.bno}">${vo.title}</a> ${vo.writer} ${vo.regdate} </li>
+	</c:forEach>
+</ul>
 
 </body>
 </html>
