@@ -48,6 +48,18 @@
             margin-bottom: 40px;
             z-index: 900;
         }
+        
+         #view-source2 {
+            position: fixed;
+            display: block;
+            right: 100;
+            bottom: 0;
+            margin-right: 40px;
+            margin-bottom: 40px;
+            z-index: 900;
+        }
+        
+        
         .mdl-card__media{
             background-color: black;
         }
@@ -221,8 +233,12 @@
     </main>
     <div class="mdl-layout__obfuscator"></div>
 </div>
-<form action='member/login' target="_blank" id="view-source"
+<form action="../member/login"  id="view-source"
    class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--white">LOGIN</form>
+   
+   
+   <form action="../member/signup"  id="view-source2"
+   class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--white2">Sign UP</form>
    
    
 <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
