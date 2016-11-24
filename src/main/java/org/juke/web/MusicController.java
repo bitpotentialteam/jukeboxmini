@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.inject.Inject;
 
+import org.juke.domain.MemberVO;
 import org.juke.domain.MusicVO;
 import org.juke.service.MusicService;
 import org.juke.service.MusicServiceImpl;
@@ -47,19 +48,11 @@ public class MusicController {
       service.register(vo);
    }
    
-   @PutMapping("/modify/{mno}")
    @PatchMapping("/modify/{mno}")
-   public void musicModify(@PathVariable("mno") Integer mno) throws Exception{
-      
-	   MusicVO vo = new MusicVO();
-	   vo.setMno(mno);
-	   vo.setTitle("go home");
-	   vo.setSinger("gpgpgp");
-	   vo.setJacket("dzd");
-	   vo.setAlbum("dfdf");
-	   
+   public void musicModify(@PathVariable("mno") Integer mno, MusicVO vo) throws Exception{
+        
+	   vo.setMno(mno);	   
 	   service.modify(vo);
-      
       
    }
    
