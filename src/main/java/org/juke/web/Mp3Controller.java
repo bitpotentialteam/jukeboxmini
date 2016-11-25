@@ -50,6 +50,7 @@ public class Mp3Controller {
 	}
 
 	@PostMapping("/musicRegister")
+	@ResponseBody
 	public void musicRegister(MusicVO vo)throws Exception{
 		
 		MusicServiceImpl service = new MusicServiceImpl();

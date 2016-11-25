@@ -93,7 +93,7 @@
                             <p>here!!</p>
                         </div>
                         <div class="col-md-5">
-                            <form class="input" action="register" method="post">
+                            <form class="input" action="musicRegister" method="post">
                                 <ul>
                                     <li>
                                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
