@@ -25,6 +25,7 @@ public class mp3Tester {
 //		
 //		mp3.getMp3(file);
 		
+		
 		System.out.println(vo.getAlbum());
 		System.out.println(vo.getJacket());
 		System.out.println(vo.getTitle());
