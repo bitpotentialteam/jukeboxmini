@@ -79,14 +79,18 @@
 						<form action="signup" method="POST" id="signup">
 
 							<div class="container">
-								<label><b>USER ID</b></label> <input type="text" name="userid">
+								<label><b>USER ID</b></label> 
+								<input type="text" id="userid">
 
-								<label><b>USER PW</b></label> <input type="password"
-									name="userpw"> <label><b>NICK NAME</b></label> <input
-									type="text" name="nick"> <button id="signupBtn"> GO! </button>
+								<label><b>USER PW</b></label> 
+								<input type="password" 	name="userpw"> <label><b>NICK NAME</b></label>
+								 <input type="text" name="nick"> 
+								 <button id="signupBtn"> GO! </button>
 
 							</div>
 						</form>
+						
+						<input type="button" value="ID쳌" name="idcheck" onclick="javascript:chkDupId();"/>
 
 					</div>
 
@@ -103,14 +107,50 @@
 	</div>
 	<script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
 	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	
 	<script>
 	
-	$("#signupBtn").on("click", function(event){
+ 	$("#signupBtn").on("click", function(event){
 
-	$("#signup").attr("action","../music/playlist");
+ 	$("#signup").attr("action","../music/playlist");
 
-});
+ });
+ 	
+</script> 
+	
+	
+	<script>
+	
 
+	function chkDupId(){
+		
+		event.preventDefault();
+
+		  var userid = $('#userid').val();
+		  if($("#userid").val() == ''){alert('ID를 입력해주세요.'); return;}
+		    	 
+		    	 console.log($('#userid').val());
+		  		  
+		  $.ajax({
+		     type : 'POST',   
+		     data:"userid="+ userid,
+		     dataType : 'text',
+		     url : '../member/checkid',  //checkid실행
+		     success : function(data) {
+		    console.log(data);
+		      if(data == 1){
+		    	  
+		       alert("중복 되어 있습니다.");
+		      }else{
+		     
+		       alert("등록 가능 합니다.");
+	
+		      }
+		     }
+		  });  
+		 }
+	
 	
 	</script>
 

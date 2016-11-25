@@ -18,4 +18,10 @@ public class MemberDAOImpl extends AbstractDAO<MemberVO, String> implements Memb
 		return sqlSession.selectOne(NAME + ".login", vo);
 	}
 
+	public int chekid(MemberVO vo) throws Exception {
+
+		return sqlSession.selectOne(NAME + ".checkid", vo);
+
+	}
+
 }

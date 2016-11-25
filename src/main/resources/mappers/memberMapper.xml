@@ -15,5 +15,9 @@
 		select * from tbl_member
 		where userid=#{userid} and userpw=#{userpw}
 	</select>
+	
+	<select id="checkid" parameterType="MemberVO" resultType="java.lang.Integer">
+		select count(*) from tbl_member where userid=#{userid}
+	</select>
 
 </mapper>

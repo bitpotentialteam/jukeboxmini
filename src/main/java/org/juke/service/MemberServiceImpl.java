@@ -22,4 +22,10 @@ public class MemberServiceImpl implements MemberService{
 		return dao.login(vo);
 	}
 
+	@Override
+	public int checkid(MemberVO vo) throws Exception {
+		
+		return dao.chekid(vo);
+	}
+
 }

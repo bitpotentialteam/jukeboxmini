@@ -2,6 +2,7 @@ package org.juke.web;
 
 import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.juke.domain.MemberVO;
@@ -16,6 +17,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Service
 @CrossOrigin
@@ -77,5 +79,42 @@ public class MemberController {
 		
 		return "redirect:../music/playlist";
 
+	}
+	
+
+	@PostMapping(value = "/checkid")
+	@ResponseBody
+	public int checkid(HttpServletRequest req, HttpServletResponse res, MemberVO vo, Model model) throws Exception {
+
+//		PrintWriter out = res.getWriter();
+		try {
+
+			// 넘어온 ID를 받는다.
+			//String userid = (req.getParameter("userid") == null) ? "" : String.valueOf(req.getParameter("userid"));
+
+			logger.info("-------------------------------");
+			logger.info(""+req.getParameter("userid"));
+					
+			
+			if(req.getParameter("userid") != null){
+	
+				int chkPoint = service.checkid(vo);
+				logger.info(""+chkPoint);
+
+				model.addAttribute("chkPoint", chkPoint);
+				
+				return chkPoint;
+				
+//				out.print(chkPoint);
+//				out.flush();
+//				out.close();
+			}
+			//vo.setUserid(userid.trim());
+
+		} catch (Exception e) {
+			e.printStackTrace();
+//			out.print("1");
+		}
+		return 0;
 	}
 }
