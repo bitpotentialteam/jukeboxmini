@@ -21,10 +21,12 @@ public class Mp3Agic {
 		MusicVO vo = new MusicVO();
 		ImageUtil util = new ImageUtil();
 		
-		String imageName = util.setImageName(file);	
 		
 		
-		Mp3File mp3file = new Mp3File("src/main/resources/mp3/" + imageName + ".mp3");	// mp3agic ����.
+		String imageName = util.setImageName(file);	// 이미지 네임 저장
+		
+		
+		Mp3File mp3file = new Mp3File("src/main/resources/mp3/" + imageName + ".mp3");	// 어떤 mp3를?
 		ID3v2 id3v2Tag = mp3file.getId3v2Tag();
 
 		String singer = id3v2Tag.getArtist();	// singer
