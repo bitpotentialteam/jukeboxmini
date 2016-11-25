@@ -47,5 +47,7 @@
 
 	<context:component-scan base-package="org.juke.dao"></context:component-scan>
 	<context:component-scan base-package="org.juke.service"></context:component-scan>
+	<context:component-scan base-package="org.juke.util"></context:component-scan>
+	<context:component-scan base-package="org.juke.mp3"></context:component-scan>
 	
 </beans>
