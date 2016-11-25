@@ -57,7 +57,11 @@
                         url("http://www.cinema4d.co.kr/files/attach/images/119/631/143/001/2010-07-27%2022;33;56.jpg");
                 background-size: 100% 100% ;
             }
-
+			.is-focused > .mdl-textfield__label, .is-dirty > .mdl-textfield__label{
+			
+				color: rgba(0, 0, 0, 0.7);
+			
+			}
 
         </style>
     </head>
@@ -92,28 +96,28 @@
                             <form class="input">
                                 <ul>
                                     <li>
-                                        <div class="mdl-textfield mdl-js-textfield">
+                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                             <input class="mdl-textfield__input" type="text" id="input_title">
                                             <label class="mdl-textfield__label" for="input_title">Title</label>
                                         </div>
                                     </li>
 
                                     <li>
-                                        <div class="mdl-textfield mdl-js-textfield">
+                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                             <input class="mdl-textfield__input" type="text" id="input_singer">
                                             <label class="mdl-textfield__label" for="input_singer">Singer</label>
                                         </div>
                                     </li>
 
                                     <li>
-                                        <div class="mdl-textfield mdl-js-textfield">
+                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                             <input class="mdl-textfield__input" type="text" id="input_album">
                                             <label class="mdl-textfield__label" for="input_album">Album</label>
                                         </div>
                                     </li>
 
                                     <li>
-                                        <div class="mdl-textfield mdl-js-textfield">
+                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                             <input class="mdl-textfield__input" type="text" id="input_date">
                                             <label class="mdl-textfield__label" for="input_date">Release Date</label>
                                         </div>
@@ -148,7 +152,7 @@
         
         $("#dragndrop").on("dragenter dragover ", function(event){
             event.preventDefault();
-        });
+        }); 
 
         $("#dragndrop").on("drop", function(event){
             event.preventDefault();
@@ -161,23 +165,28 @@
             var formData = new FormData();	// javascript로 form tag를 만든다고 생각. but 브라우저의 호환이 좋지 않다.
             formData.append("file", file);	// "file" 형식의 file을 추가.
 
+            
             console.log(formData);
 
             $.ajax({	// ajax로 처리하는 이유는 옵션을 추가해줘야 동작한다.
 
                 url:"uploadFile",
                 data:formData,	
-                dataType:'text',
+                dataType:'json',
                 type:"post",
                 contentType:false,
                 processData:false,
-                success:function(data){
-                    console.log(data);
-                    alert(data);              
-                   	$(".input_title").val().val("${regist.title}");
-					$(".input_singer").val().val("${regist.singer}");
-					$(".input_album").val().val("${regist.album}");
-					$(".input_date").val().val("${regist.date}");
+                success:function(result){
+                	
+                    console.log(result);
+					console.log(result.title);                 
+                    
+					$(".mdl-js-textfield").addClass("is-dirty");
+                  	$("#input_title").val(result.title);
+					$("#input_singer").val(result.singer);
+					$("#input_album").val(result.album);
+					$("#input_date").val(result.regDate);
+             
                 }
             });
 
