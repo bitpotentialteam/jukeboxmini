@@ -7,6 +7,7 @@ import java.io.InputStream;
 import org.apache.commons.io.IOUtils;
 import org.juke.domain.MusicVO;
 import org.juke.mp3.Mp3Agic;
+import org.juke.service.MusicServiceImpl;
 import org.juke.util.ImageUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -28,6 +29,7 @@ public class Mp3Controller {
 	@ResponseBody 
 	public MusicVO uploadFile(MultipartFile file, Model model) throws Exception {
 
+		MusicServiceImpl service = new MusicServiceImpl();
 		Mp3Agic mp3 = new Mp3Agic();
 		ImageUtil util = new ImageUtil();
 		
@@ -41,6 +43,7 @@ public class Mp3Controller {
 		logger.info("copy");  
 		
 		MusicVO vo = mp3.getMp3(file, uploadName);
+		service.register(vo);
 		logger.info("mp3 end");
 		
 		fos.close();
