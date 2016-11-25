@@ -7,9 +7,9 @@
 
 	<insert id="create" parameterType="MusicVO">
 		insert into tbl_music(mno,
-		title, singer, album, jacket, userid)
+		title, singer, album, jacket)
 		values (seq_mno.nextval,
-		#{title}, #{singer}, #{album}, #{jacket}, #{userid})
+		#{title}, #{singer}, #{album}, #{jacket})
 	</insert>
 
 	<select id="read" resultType="MusicVO">
