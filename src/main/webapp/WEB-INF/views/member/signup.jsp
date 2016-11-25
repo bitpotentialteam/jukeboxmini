@@ -79,18 +79,33 @@
 						<form action="signup" method="POST" id="signup">
 
 							<div class="container">
-								<label><b>USER ID</b></label> 
-								<input type="text" id="userid">
-
-								<label><b>USER PW</b></label> 
-								<input type="password" 	name="userpw"> <label><b>NICK NAME</b></label>
-								 <input type="text" name="nick"> 
-								 <button id="signupBtn"> GO! </button>
-
+							<div class="mdl-textfield mdl-js-textfield">
+									<input class="mdl-textfield__input" type="text" id="userid"
+										name="userid"> <label class="mdl-textfield__label"
+										for="userid"><b>USER ID</b></label>
+								</div>
+						<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id='idcheck' onclick="javascript:chkDupId();" >ID CHECK</button>
+	<p>
+								<div class="mdl-textfield mdl-js-textfield">
+									<input class="mdl-textfield__input" type="password" id="input2"
+										name="userpw"> <label class="mdl-textfield__label"
+										for="input2"><b>USER PW</b></label> </p>
+								</div>
+							
+							<p>	
+								<div class="mdl-textfield mdl-js-textfield">
+									<input class="mdl-textfield__input" type="password" id="input3"
+										name="userpw"> <label class="mdl-textfield__label"
+										for="input3"><b>NICK NAME</b></label> </p>
+								</div>
+								
+								
+								<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id='signupBtn'>SIGN UP</button>
+							
 							</div>
 						</form>
 						
-						<input type="button" value="ID쳌" name="idcheck" onclick="javascript:chkDupId();"/>
+<!-- 						<input type="button" value="ID쳌" name="idcheck" onclick="javascript:chkDupId();"/> -->
 
 					</div>
 
