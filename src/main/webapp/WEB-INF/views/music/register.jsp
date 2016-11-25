@@ -83,7 +83,7 @@
                 <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
 
                     <div class="row">
-                        <div class="col-md-7">
+                        <div class="col-md-7" id="dragndrop">
                             <p>drop</p>
                             <p>your music file </p>
                             <p>here!!</p>
@@ -136,6 +136,8 @@
 </div>
 
 <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
 <script>
     //drag&drop
     // 파일을 드래그해서 새 창이 열리는 event를 막아준다. ==> 3개의 이벤트를 2번에 나눠 막음. why? drop event시 ajax를 호출하기 위해.
@@ -143,11 +145,12 @@
 
         var uploadedList = $(".uploadedList");
         // 두 개의 이벤트가 같이 먹는다.
-        $(".col-md-7").on("dragenter dragover ", function(event){
+        
+        $("#dragndrop").on("dragenter dragover ", function(event){
             event.preventDefault();
         });
 
-        $(".col-md-7").on("drop", function(event){
+        $("#dragndrop").on("drop", function(event){
             event.preventDefault();
 
             var files = event.originalEvent.dataTransfer.files;
@@ -163,18 +166,18 @@
             $.ajax({	// ajax로 처리하는 이유는 옵션을 추가해줘야 동작한다.
 
                 url:"uploadFile",
-                data:formData,	// data Type을 formData로 주면 기본으로 데이터 타입이 multipart로 전달.
+                data:formData,	
                 dataType:'text',
                 type:"post",
                 contentType:false,
                 processData:false,
                 success:function(data){
                     console.log(data);
-                    //alert(data);              
-					$(".input_title").val().val("${regist.title}");
+                    alert(data);              
+                   	$(".input_title").val().val("${regist.title}");
 					$(".input_singer").val().val("${regist.singer}");
 					$(".input_album").val().val("${regist.album}");
-					$(".input_date").val().val("${regist.date}");					
+					$(".input_date").val().val("${regist.date}");
                 }
             });
 

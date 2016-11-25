@@ -12,9 +12,11 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
+@RequestMapping("/music/*")
 @Controller
 public class ImageController {
 
@@ -35,12 +37,17 @@ public class ImageController {
 		
 		String uploadName = util.setImageName(file);
 		
-		FileOutputStream fos = new FileOutputStream("C:\\Users\\SOAS\\git\\jukeboxmini\\src\\main\\resources\\" +
-													uploadName + "\\mp3");
-
+		logger.info(uploadName);
+		FileOutputStream fos = new FileOutputStream("C:\\jukebox\\" +
+													uploadName);
+		logger.info("fos:"+fos);
 		IOUtils.copy(file.getInputStream(), fos);
 
-		mp3.getMp3(file);
+		logger.info("copy");
+		
+		mp3.getMp3(file, uploadName);
+		
+		logger.info("mp3 end");
 		
 		fos.close();
 
