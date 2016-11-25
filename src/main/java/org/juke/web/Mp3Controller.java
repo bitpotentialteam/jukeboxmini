@@ -43,7 +43,6 @@ public class Mp3Controller {
 		logger.info("copy");  
 		
 		MusicVO vo = mp3.getMp3(file, uploadName);
-		service.register(vo);
 		logger.info("mp3 end");
 		
 		fos.close();
