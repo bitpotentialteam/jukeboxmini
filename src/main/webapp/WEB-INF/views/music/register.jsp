@@ -93,29 +93,29 @@
                                 <ul>
                                     <li>
                                         <div class="mdl-textfield mdl-js-textfield">
-                                            <input class="mdl-textfield__input" type="text" id="input1">
-                                            <label class="mdl-textfield__label" for="input1">Title</label>
+                                            <input class="mdl-textfield__input" type="text" id="input_title">
+                                            <label class="mdl-textfield__label" for="input_title">Title</label>
                                         </div>
                                     </li>
 
                                     <li>
                                         <div class="mdl-textfield mdl-js-textfield">
-                                            <input class="mdl-textfield__input" type="text" id="input2">
-                                            <label class="mdl-textfield__label" for="input2">Singer</label>
+                                            <input class="mdl-textfield__input" type="text" id="input_singer">
+                                            <label class="mdl-textfield__label" for="input_singer">Singer</label>
                                         </div>
                                     </li>
 
                                     <li>
                                         <div class="mdl-textfield mdl-js-textfield">
-                                            <input class="mdl-textfield__input" type="text" id="input3">
-                                            <label class="mdl-textfield__label" for="input3">Album</label>
+                                            <input class="mdl-textfield__input" type="text" id="input_album">
+                                            <label class="mdl-textfield__label" for="input_album">Album</label>
                                         </div>
                                     </li>
 
                                     <li>
                                         <div class="mdl-textfield mdl-js-textfield">
-                                            <input class="mdl-textfield__input" type="text" id="input4">
-                                            <label class="mdl-textfield__label" for="input4">RegDate</label>
+                                            <input class="mdl-textfield__input" type="text" id="input_date">
+                                            <label class="mdl-textfield__label" for="input_date">Release Date</label>
                                         </div>
                                     </li>
                                 </ul>
@@ -170,8 +170,11 @@
                 processData:false,
                 success:function(data){
                     console.log(data);
-                    alert(data);
-
+                    //alert(data);              
+					$(".input_title").val().val("${regist.title}");
+					$(".input_singer").val().val("${regist.singer}");
+					$(".input_album").val().val("${regist.album}");
+					$(".input_date").val().val("${regist.date}");					
                 }
             });
 
@@ -180,6 +183,6 @@
     });
 </script>
 
-
+ 
 </body>
 </html>
