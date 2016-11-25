@@ -29,7 +29,6 @@ public class Mp3Controller {
 	@ResponseBody 
 	public MusicVO uploadFile(MultipartFile file, Model model) throws Exception {
 
-		MusicServiceImpl service = new MusicServiceImpl();
 		Mp3Agic mp3 = new Mp3Agic();
 		ImageUtil util = new ImageUtil();
 		
@@ -43,7 +42,6 @@ public class Mp3Controller {
 		logger.info("copy");  
 		
 		MusicVO vo = mp3.getMp3(file, uploadName);
-		service.register(vo);
 		logger.info("mp3 end");
 		
 		fos.close();
@@ -51,6 +49,14 @@ public class Mp3Controller {
 		return vo;
 	}
 
+	@PostMapping("/musicRegister")
+	public void musicRegister(MusicVO vo)throws Exception{
+		
+		MusicServiceImpl service = new MusicServiceImpl();
+		
+		service.register(vo);
+	}
+	
 	@GetMapping(value = "/show", produces = { "image/jpg", "image/jpeg", "image/png", "image/gif" })
 	public @ResponseBody byte[] show(String name) throws Exception {
 
