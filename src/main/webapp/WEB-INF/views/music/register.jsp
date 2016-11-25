@@ -93,7 +93,7 @@
                             <p>here!!</p>
                         </div>
                         <div class="col-md-5">
-                            <form class="input">
+                            <form class="input" action="register" method="post">
                                 <ul>
                                     <li>
                                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
@@ -124,7 +124,7 @@
                                     </li>
                                 </ul>
                                 <div class="box-footer">
-                                    <button class="mdl-button mdl-js-button mdl-js-ripple-effect">register</button>
+                                    <button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="regBtn">register</button>
                                 </div>
                             </form>
                         </div>
@@ -149,6 +149,7 @@
 
         var uploadedList = $(".uploadedList");
         // 두 개의 이벤트가 같이 먹는다.
+        
         
         $("#dragndrop").on("dragenter dragover ", function(event){
             event.preventDefault();
