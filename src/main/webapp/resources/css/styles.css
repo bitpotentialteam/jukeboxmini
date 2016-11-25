@@ -580,11 +580,21 @@ body .demo-blog {
     width: 200px;
     height: 200px;
     position: absolute;
-    background: url('../images/album/bob-marley-cd-cover-art.jpg') no-repeat right top;
+    overflow: hidden;
+    background: transparent;
+    text-align: center;
+}
+#wrapper .listcard > img{
+	width:200px;
+	height:auto;
+	display: inline-block;
+	vertical-align: middle;
+	
 }
 
 #wrapper #list1{
     -webkit-transform:translateZ(250px) ;
+    
 }
 
 #wrapper #list2 {

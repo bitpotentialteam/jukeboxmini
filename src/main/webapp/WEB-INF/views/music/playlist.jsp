@@ -118,14 +118,14 @@
 
                     <div id="container">
                         <div id="wrapper">
-                            <div class="listcard" id="list1"></div>
-                            <div class="listcard" id="list2"></div>
-                            <div class="listcard" id="list3"></div>
-                            <div class="listcard" id="list4"></div>
-                            <div class="listcard" id="list5"></div>
-                            <div class="listcard" id="list6"></div>
-                            <div class="listcard" id="list7"></div>
-                            <div class="listcard" id="list8"></div>
+                            <div class="listcard" id="list1"><img src="${list['0'].jacket}"></div>
+                            <div class="listcard" id="list2"><img src="${list['1'].jacket}"></div>
+                            <div class="listcard" id="list3"><img src="${list['2'].jacket}"></div>
+                            <div class="listcard" id="list4"><img src="${list['3'].jacket}"></div>
+                            <div class="listcard" id="list5"><img src="${list['4'].jacket}"></div>
+                            <div class="listcard" id="list6"><img src="${list['5'].jacket}"></div>
+                            <div class="listcard" id="list7"><img src="${list['6'].jacket}"></div>
+                            <div class="listcard" id="list8"><img src="../resources/images/mp3images/2.jpg"></div>
                         </div>
                     </div>
 
@@ -341,10 +341,6 @@ $("#view-source2").html('Register');
 </script>
 
 </c:if>
-
-
-
-
 
 </body>
 </html>

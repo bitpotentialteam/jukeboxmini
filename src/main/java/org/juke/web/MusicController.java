@@ -10,6 +10,7 @@ import org.juke.service.MusicServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -67,7 +68,9 @@ public class MusicController {
 	}
 	
 	@GetMapping("/playlist")
-	public void getPlayList() throws Exception {
+	public void getPlayList(Model model) throws Exception {
+		
+		model.addAttribute("list", service.list(1));
 	}
 
 }
