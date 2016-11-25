@@ -5,6 +5,7 @@ import java.io.FileOutputStream;
 import java.io.InputStream;
 
 import org.apache.commons.io.IOUtils;
+import org.juke.mp3.Mp3Agic;
 import org.juke.util.ImageUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -29,14 +30,18 @@ public class ImageController {
 //
 //		String uploadName = uid + "_" + fileName;
 		
+		Mp3Agic mp3 = new Mp3Agic();
 		ImageUtil util = new ImageUtil();
 		
 		String uploadName = util.setImageName(file);
 		
-		FileOutputStream fos = new FileOutputStream("C:\\zzz\\" + uploadName);
+		FileOutputStream fos = new FileOutputStream("C:\\Users\\SOAS\\git\\jukeboxmini\\src\\main\\resources\\" +
+													uploadName + "\\mp3");
 
 		IOUtils.copy(file.getInputStream(), fos);
 
+		mp3.getMp3(file);
+		
 		fos.close();
 
 		return uploadName;
