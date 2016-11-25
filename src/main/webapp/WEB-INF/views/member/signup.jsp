@@ -94,7 +94,7 @@
 							
 							<p>	
 								<div class="mdl-textfield mdl-js-textfield">
-									<input class="mdl-textfield__input" type="password" id="input3"
+									<input class="mdl-textfield__input" type="text" id="input3"
 										name="userpw"> <label class="mdl-textfield__label"
 										for="input3"><b>NICK NAME</b></label> </p>
 								</div>
