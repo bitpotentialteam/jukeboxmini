@@ -112,8 +112,9 @@
 	<script>
 	
  	$("#signupBtn").on("click", function(event){
+ 		
 
- 	$("#signup").attr("action","../member/login");
+ 	$("#signup").attr("action","../music/playlist");
 
  });
  	

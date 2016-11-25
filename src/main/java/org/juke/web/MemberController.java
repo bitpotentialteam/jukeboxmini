@@ -94,7 +94,7 @@ public class MemberController {
 
 			logger.info("-------------------------------");
 			logger.info(""+req.getParameter("userid"));
-					
+
 			
 			if(req.getParameter("userid") != null){
 	
