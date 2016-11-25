@@ -22,6 +22,7 @@ public class Mp3Agic {
 
 	public MusicVO getMp3(MultipartFile file, String uploadName) throws Exception {
 		
+		
 		MusicVO vo = new MusicVO();
 		ImageUtil util = new ImageUtil();
 		
