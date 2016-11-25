@@ -113,7 +113,7 @@
 	
  	$("#signupBtn").on("click", function(event){
 
- 	$("#signup").attr("action","../music/playlist");
+ 	$("#signup").attr("action","../member/login");
 
  });
  	
